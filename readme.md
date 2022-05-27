@@ -1,5 +1,10 @@
 # Quiz de Jogos PW
 
+Coisas a fazer:
+
+- Perguntas
+- Design
+- Tudo 😐
 ## Perguntas:
 
 **1) Qual desses jogos é o mais caro? (Pode fazer essa incluindo DLCs tbm)**
@@ -11,7 +16,7 @@
 
 **2) Quem é esse cara aqui? (inserir imagem do Jacket do hotline miami)**
 
-    A) Raiden (Obs.: do Metal Gear pq tem mtos)
+    A) Raiden (Obs.: do Metal Gear pq tem vários)
     B) Jacket
     C) Dallas
     D) Gordon Freeman
