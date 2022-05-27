@@ -22,6 +22,7 @@ Coisas a fazer:
     D) Gordon Freeman
 
 **3) Qual desses jogos possui a menor nota de review?**
+
     a) Fall Guys (8/10)
     b) Fallout 75 (5/10)
     c) Metal Gear Survive (6,5/10)
