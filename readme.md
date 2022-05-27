@@ -49,7 +49,7 @@ Coisas a fazer:
     C) Cria uma base, explora o mundo e enfrenta uma diversidade de inimigos.
     D) Tem que chegar o mais longe possível em uma masmorra.
 
-**7) Quem é o antagonista principal de Metal Gear Solid V: The Phantom Pain?
+**7) Quem é o antagonista principal de Metal Gear Solid V: The Phantom Pain?**
 
     A) Greyfox
     B) Snake
