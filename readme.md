@@ -21,9 +21,16 @@ Coisas a fazer:
     C) Dallas
     D) Gordon Freeman
 
-**3) Em qual desses jogos Hack 'n Slash você consegue fazer combos com seus golpes pontuando do E ao S?**
+**3) Qual desses jogos possui a menor nota de review?**
+    a) Fall Guys (8/10)
+    b) Fallout 75 (5/10)
+    c) Metal Gear Survive (6,5/10)
+    d) Grand Theft Auto: The Trilogy - The Definitive Edition (2/10)
+
+**4) Em qual desses jogos Hack 'n Slash você consegue fazer combos com seus golpes pontuando do E ao S?**
 
     A) Metal Gear Rising: Revengeance
     B) Devil May Cry
     C) Sekiro: Shadows Die Twice
     D) Katana Zero
+
