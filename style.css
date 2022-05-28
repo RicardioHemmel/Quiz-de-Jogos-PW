@@ -22,6 +22,7 @@ body{
     color: #f0f7a0;
     width: fit-content;
     height: fit-content;
+    min-height: 35h;
     border: 5px solid #b9bc94;
     box-shadow: 
     0 0 0.1vw 0.4vw rgb(205, 208, 151),
