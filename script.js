@@ -4,22 +4,53 @@ var helpButton = document.getElementById('helpButton')
 var pacManPause = document.getElementById('pacManPause')
 var pacManPlay = document.getElementById('pacManPlay')
 
-function renderFirstQuestion(){
+var question = 1;
+var score = 0;
+
+function renderQuestion(){
     // O innerHTML serve pra escrever dentro do html (Nesse caso dentro da div mainBox)
+    switch (question){
+        case 1:
     mainBox.innerHTML = `
-        <div>
-        <h1>Texto</h1>
+        <div class="headingContainer">
+        <h1>${question} - Quem é esse doido aí?</h1>
         </div>
         <div class="imageContainer">
-            <img src="img/jacket-hotline-miami.jpg">
+            <img src="./public/img/jacket-hotline-miami.jpg">
         </div>
         <div class="buttonsContainer">
-            <button class="optionButton questionButton">Alternativa A</button>
-            <button class="optionButton questionButton">Alternativa B</button>
-            <button class="optionButton questionButton">Alternativa C</button>
-            <button class="optionButton questionButton">Alternativa D</button>
+            <button onClick="questionAnswered(true)" class="optionButton questionButton">Alternativa A</button>
+            <button onClick="questionAnswered(false)" class="optionButton questionButton">Alternativa B</button>
+            <button onClick="questionAnswered(false)" class="optionButton questionButton">Alternativa C</button>
+            <button onClick="questionAnswered(false)" class="optionButton questionButton">Alternativa D</button>
         </div>
         `;
+        break;
+        case 2:
+        mainBox.innerHTML = `
+        <div class="headingContainer">
+            <h1>${question} - Quem é esse doido aí?</h1>
+        </div>
+        <div class="imageContainer">
+            <img src="./public/img/jacket-hotline-miami.jpg">
+        </div>
+        <div class="buttonsContainer">
+            <button onClick="questionAnswered(true)" class="optionButton questionButton">Alternativa A</button>
+            <button onClick="questionAnswered(false)" class="optionButton questionButton">Alternativa B</button>
+            <button onClick="questionAnswered(false)" class="optionButton questionButton">Alternativa C</button>
+            <button onClick="questionAnswered(false)" class="optionButton questionButton">Alternativa D</button>
+        </div>
+        `;
+        break;
+        case 3:
+            mainBox.innerHTML = `
+            <p>Sua pontuação: ${score}</p>
+            <br>
+            <button onclick="resetAndGoToMainMenu()" class="optionButton questionButton">Menu Principal</button>
+        `;
+    }
+    console.log(`question: ${question}`);
+    console.log(`score: ${score}`);
 }
 
 function startQuiz(){
@@ -36,7 +67,9 @@ function startQuiz(){
     function frame(){
         if (h == 55 || w == 65){
             clearInterval(id);
-            renderFirstQuestion();
+            renderQuestion();
+            mainBox.style.height = `fit-content`;
+            mainBox.style.width = `fit-content`;
         } else {
             mainBox.style.height = `${h}vh`;
             mainBox.style.width = `${w}vw`;
@@ -60,4 +93,17 @@ function audioPause(){
     audio.pause();
     pacManPause.style.display = 'none';
     pacManPlay.style.display = 'block';
+}
+
+function questionAnswered(correct){
+    question++;
+    renderQuestion();
+    if(correct){
+        score++;
+    }
+}
+
+function resetAndGoToMainMenu(){
+    score = 0;
+    question = 1;
 }
