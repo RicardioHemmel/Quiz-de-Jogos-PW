@@ -35,6 +35,7 @@ body{
     padding: 60px;
     border-radius: 8px;  
     background-color: #000000fd;
+    transition: all 0.1s;
 }
 
 .mainBox:hover{

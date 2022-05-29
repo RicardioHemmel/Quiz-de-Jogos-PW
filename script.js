@@ -3,10 +3,13 @@ var startButton = document.getElementById('startButton');
 var helpButton = document.getElementById('helpButton')
 
 function renderFirstQuestion(){
+    // O innerHTML serve pra escrever dentro do html (Nesse caso dentro da div mainBox)
     mainBox.innerHTML = `<h1>Texto</h1>`
 }
 
 function startQuiz(){
+    // O .style (+ algum atributo tipo display ou backgroundColor) serve pra chamar algum atributo CSS da tag HTML
+    // Com isso dá pra atribuir um valor nele q vai ser uma string, q nem aqui embaixo =)
     startButton.style.display = 'none';
     helpButton.style.display = 'none';
     let id = null;
