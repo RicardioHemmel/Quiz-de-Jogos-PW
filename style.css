@@ -37,7 +37,6 @@ body{
     color: #f0f7a0;
     width: fit-content;
     height: fit-content;
-    min-height: 35h;
     border: 5px solid #b9bc94;
     box-shadow: 
     0 0 0.1vw 0.4vw rgb(205, 208, 151),
@@ -47,7 +46,7 @@ body{
     inset 0 0 1.5vw 0.4vw rgb(192, 192, 3),
     inset 0 0 0.4vw 0.2vw rgb(189, 197, 70),
     inset 0 0 0.5vw 0.2vw rgb(205, 208, 151);
-    padding: 60px;
+    padding: 30px 60px;
     border-radius: 8px;  
     background-color: #000000fd;
     transition: all 0.1s;
@@ -140,4 +139,22 @@ body{
 .questionButton{
     margin: 0px 10px;
     padding: 0;
+    width: justify-content;
+    height: justify-content;
+}
+
+.buttonsContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 12vh;
+}
+
+.imageContainer img{
+    width: fit-content;
+    max-width: 14.5vw;
+}
+
+.headingContainer{
+    margin-bottom: 2%;
 }
