@@ -37,6 +37,21 @@ body{
     background-color: #000000fd;
 }
 
+.mainBox:hover{
+    content: normal;
+    color: #1bbcd7;
+    border: 5px solid #098095;
+    box-shadow: 
+    0 0 0.1vw 0.4vw #1bbcd7,
+    0 0 0.4vw 0.6vw #07aac7,
+    0 0 4vw 0.4vw #01798f,
+    
+    inset 0 0 0.5vw 0.125vw #01798f,
+    inset 0 0 0.1vw 0.075vw #07aac7,
+    inset 0 0 0.1vw 0.075vw #1bbcd7;    
+    transition: all 0.1s;
+}
+
 .optionButton{
     color: #f0f7a0;
     background-color: #000000;
@@ -45,67 +60,53 @@ body{
     border-radius: 8px;
     border: 3px solid #b9bc94;
     box-shadow: 
-    0 0 0.1vw 0.4vw rgb(205, 208, 151),
-    0 0 0.4vw 0.6vw rgb(189, 197, 70),
-    0 0 4vw 0.4vw rgb(192, 192, 3),
+    0 0 0.1vw 0.4vw #cdd097,
+    0 0 0.4vw 0.6vw #bdc546,
+    0 0 4vw 0.4vw #c0c003,
     
-    inset 0 0 0.5vw 0.125vw rgb(192, 192, 3),
-    inset 0 0 0.1vw 0.075vw rgb(189, 197, 70),
-    inset 0 0 0.1vw 0.075vw rgb(205, 208, 151);    
+    inset 0 0 0.5vw 0.125vw #c0c003,
+    inset 0 0 0.1vw 0.075vw #bdc546,
+    inset 0 0 0.1vw 0.075vw #cdd097;    
     margin-top: 35px;
     width: 12vw;
     height: 6vh;
     padding: 3%;
-    transition: all 0.6s;
+    cursor: pointer;
 }
 
 .optionButton:hover{
-    color: #a0f7da;
-    background-color: #000000;
-    font-size: 12pt;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    border-radius: 8px;
-    border: 3px solid #94bcb0;
+    content: normal;
+    color: #1bbcd7;
+    border: 3px solid #098095;
     box-shadow: 
-    0 0 0.1vw 0.4vw rgb(151, 208, 189),
-    0 0 0.4vw 0.6vw rgb(70, 197, 159),
-    0 0 4vw 0.4vw rgb(3, 192, 145),
+    0 0 0.1vw 0.4vw #1bbcd7,
+    0 0 0.4vw 0.6vw #07aac7,
+    0 0 4vw 0.4vw #01798f,
     
-    inset 0 0 0.5vw 0.125vw rgb(3, 192, 145),
-    inset 0 0 0.1vw 0.075vw rgb(70, 197, 159),
-    inset 0 0 0.1vw 0.075vw rgb(151, 208, 189);    
-    margin-top: 35px;
-    width: 12vw;
-    height: 6vh;
-    padding: 3%;
-    transition: all 0.6s;
+    inset 0 0 0.5vw 0.125vw #01798f,
+    inset 0 0 0.1vw 0.075vw #07aac7,
+    inset 0 0 0.1vw 0.075vw #1bbcd7;    
+    transition: all 0.1s;
 }
 
 .optionButton:active{
-    color: #a0c3f7;
-    background-color: #000000;
-    font-size: 12pt;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    border-radius: 8px;
-    border: 3px solid #94a9bc;
+    content: normal;
+    color: #0060a0;
+    border: 3px solid #0060a0;
     box-shadow: 
-    0 0 0.1vw 0.4vw rgb(151, 157, 208),
-    0 0 0.4vw 0.6vw rgb(70, 104, 197),
-    0 0 4vw 0.4vw rgb(3, 63, 192),
+    0 0 0.1vw 0.4vw #128bdc,
+    0 0 0.4vw 0.6vw #0a71b6,
+    0 0 4vw 0.4vw #02558c,
     
-    inset 0 0 0.5vw 0.125vw rgb(3, 63, 192),
-    inset 0 0 0.1vw 0.075vw rgb(70, 104, 197),
-    inset 0 0 0.1vw 0.075vw rgb(151, 157, 208);
-    margin-top: 35px;
-    width: 11vw;
-    height: 5vh;
-    padding: 3%;
+    inset 0 0 0.5vw 0.125vw #02558c,
+    inset 0 0 0.1vw 0.075vw #0a71b6,
+    inset 0 0 0.1vw 0.075vw #128bdc;    
     transition: all 0.1s;
 }
 
 .buttonContainer{
 
-    width: 12%;
+    width: 12vw;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
