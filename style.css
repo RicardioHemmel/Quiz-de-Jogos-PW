@@ -55,7 +55,52 @@ body{
     margin-top: 35px;
     width: 12vw;
     height: 6vh;
-    padding: 5%;
+    padding: 3%;
+    transition: all 0.6s;
+}
+
+.optionButton:hover{
+    color: #a0f7da;
+    background-color: #000000;
+    font-size: 12pt;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-radius: 8px;
+    border: 3px solid #94bcb0;
+    box-shadow: 
+    0 0 0.1vw 0.4vw rgb(151, 208, 189),
+    0 0 0.4vw 0.6vw rgb(70, 197, 159),
+    0 0 4vw 0.4vw rgb(3, 192, 145),
+    
+    inset 0 0 0.5vw 0.125vw rgb(3, 192, 145),
+    inset 0 0 0.1vw 0.075vw rgb(70, 197, 159),
+    inset 0 0 0.1vw 0.075vw rgb(151, 208, 189);    
+    margin-top: 35px;
+    width: 12vw;
+    height: 6vh;
+    padding: 3%;
+    transition: all 0.6s;
+}
+
+.optionButton:active{
+    color: #a0c3f7;
+    background-color: #000000;
+    font-size: 12pt;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-radius: 8px;
+    border: 3px solid #94a9bc;
+    box-shadow: 
+    0 0 0.1vw 0.4vw rgb(151, 157, 208),
+    0 0 0.4vw 0.6vw rgb(70, 104, 197),
+    0 0 4vw 0.4vw rgb(3, 63, 192),
+    
+    inset 0 0 0.5vw 0.125vw rgb(3, 63, 192),
+    inset 0 0 0.1vw 0.075vw rgb(70, 104, 197),
+    inset 0 0 0.1vw 0.075vw rgb(151, 157, 208);
+    margin-top: 35px;
+    width: 11vw;
+    height: 5vh;
+    padding: 3%;
+    transition: all 0.1s;
 }
 
 .buttonContainer{

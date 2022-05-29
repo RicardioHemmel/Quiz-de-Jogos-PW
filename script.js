@@ -4,6 +4,7 @@ var helpButton = document.getElementById('helpButton')
 
 function renderFirstQuestion(){
     mainBox.innerHTML = `<h1>Texto</h1>`
+    
 }
 
 function startQuiz(){
