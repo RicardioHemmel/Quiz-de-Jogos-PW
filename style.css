@@ -33,6 +33,7 @@ body{
 }
 
 .mainBox{
+    user-select: none;
     color: #f0f7a0;
     width: fit-content;
     height: fit-content;
@@ -87,7 +88,7 @@ body{
     height: 6vh;
     padding: 3%;
     cursor: pointer;
-    transition: all 0.1s;
+    transition: all 0.2s;
 }
 
 .optionButton:hover{
@@ -102,7 +103,7 @@ body{
     inset 0 0 0.5vw 0.125vw #01798f,
     inset 0 0 0.1vw 0.075vw #07aac7,
     inset 0 0 0.1vw 0.075vw #1bbcd7;    
-    transition: all 0.1s;
+    transition: all 0.2s;
 }
 
 .optionButton:active{
@@ -117,7 +118,7 @@ body{
     inset 0 0 0.5vw 0.125vw #02558c,
     inset 0 0 0.1vw 0.075vw #0a71b6,
     inset 0 0 0.1vw 0.075vw #128bdc;    
-    transition: all 0.1s;
+    transition: all 0.2s;
 }
 
 .buttonContainer{
@@ -134,4 +135,9 @@ body{
     width: 100px;  
     position: relative;
     cursor: pointer;
+}
+
+.questionButton{
+    margin: 0px 10px;
+    padding: 0;
 }

@@ -6,7 +6,20 @@ var pacManPlay = document.getElementById('pacManPlay')
 
 function renderFirstQuestion(){
     // O innerHTML serve pra escrever dentro do html (Nesse caso dentro da div mainBox)
-    mainBox.innerHTML = `<h1>Texto</h1>`
+    mainBox.innerHTML = `
+        <div>
+        <h1>Texto</h1>
+        </div>
+        <div class="imageContainer">
+            <img src="img/jacket-hotline-miami.jpg">
+        </div>
+        <div class="buttonsContainer">
+            <button class="optionButton questionButton">Alternativa A</button>
+            <button class="optionButton questionButton">Alternativa B</button>
+            <button class="optionButton questionButton">Alternativa C</button>
+            <button class="optionButton questionButton">Alternativa D</button>
+        </div>
+        `;
 }
 
 function startQuiz(){
