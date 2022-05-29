@@ -55,3 +55,8 @@ Coisas a fazer:
     B) Snake
     C) Kazuhira Müller
     D) Skull Face
+    
+## Ideias:
+
+-  Animação no pacman
+-  Fundo que mexe
