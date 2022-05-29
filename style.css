@@ -1,6 +1,7 @@
 body{
     color: white;
-    background-image: url(./public/img/backgroundTetris.PNG);
+    background-color: #000000;
+    /* background-image: url(./public/img/backgroundGif.gif); */
     margin: 0;
     padding: 0;
     width: 100%;
@@ -9,6 +10,18 @@ body{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     overflow-y: hidden;
     background-repeat: no-repeat;
+}
+
+#background-video {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
 }
 
 .container{
@@ -117,8 +130,9 @@ body{
     justify-content: space-around;
 }
 
-#pacMan{
+.pacMan{
     height: 90px;
     width: 100px;  
     position: relative;
+    cursor: pointer;
 }
