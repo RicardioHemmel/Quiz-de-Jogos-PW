@@ -7,6 +7,8 @@ body{
     height: 100%;
     text-align: center;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    overflow-y: hidden;
+    background-repeat: no-repeat;
 }
 
 .container{
@@ -111,4 +113,10 @@ body{
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-around;
+}
+
+#pacMan{
+    height: 90px;
+    width: 100px;  
+    position: relative;
 }
