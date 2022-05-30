@@ -4,13 +4,14 @@ var helpButton = document.getElementById('helpButton')
 var pacManPause = document.getElementById('pacManPause')
 var pacManPlay = document.getElementById('pacManPlay')
 
-var question = 1;
+var question = 0;
 var score = 0;
 
+// Html das questões
 function renderQuestion(){
     // O innerHTML serve pra escrever dentro do html (Nesse caso dentro da div mainBox)
     switch (question){
-        case 1:
+        case 0:
     mainBox.innerHTML = `
         <div class="headingContainer">
         <h1>${question} - Quem é esse doido aí?</h1>
@@ -26,7 +27,7 @@ function renderQuestion(){
         </div>
         `;
         break;
-        case 2:
+        case 1:
         mainBox.innerHTML = `
         <div class="headingContainer">
             <h1>${question} - Quem é esse doido aí?</h1>
@@ -35,44 +36,51 @@ function renderQuestion(){
             <img src="./public/img/jacket-hotline-miami.jpg">
         </div>
         <div class="buttonsContainer">
-            <button onClick="questionAnswered(true)" class="optionButton questionButton">Alternativa A</button>
-            <button onClick="questionAnswered(false)" class="optionButton questionButton">Alternativa B</button>
+            <button onClick="questionAnswered(false)" class="optionButton questionButton">Alternativa A</button>
+            <button onClick="questionAnswered(true)" class="optionButton questionButton">Alternativa B</button>
             <button onClick="questionAnswered(false)" class="optionButton questionButton">Alternativa C</button>
             <button onClick="questionAnswered(false)" class="optionButton questionButton">Alternativa D</button>
         </div>
         `;
         break;
-        case 3:
+        case 2:
             mainBox.innerHTML = `
             <p>Sua pontuação: ${score}</p>
             <br>
             <button onclick="resetAndGoToMainMenu()" class="optionButton questionButton">Menu Principal</button>
         `;
+        break;
     }
     console.log(`question: ${question}`);
     console.log(`score: ${score}`);
 }
 
-function startQuiz(){
+// Html das instruções
+function renderInstructions(){
+    mainBox.innerHTML = 
+    `
+    <h1>Instruções</h1>
+    `
+}
+
+function increaseMainBox(fun){
     // O .style (+ algum atributo tipo display ou backgroundColor) serve pra chamar algum atributo CSS da tag HTML
     // Com isso dá pra atribuir um valor nele q vai ser uma string, q nem aqui embaixo =)
     startButton.style.display = 'none';
     helpButton.style.display = 'none';
     let id = null;
-    let h = mainBox.style.height;
-    let w = mainBox.style.width;
-    mainBox.innerText = '';
+    let h = mainBox.style.minHeight;
+    let w = mainBox.style.minWidth;
+    mainBox.innerHTML = '';
     clearInterval(id);
     id = setInterval(frame, 15);
     function frame(){
         if (h == 55 || w == 65){
             clearInterval(id);
-            renderQuestion();
-            mainBox.style.height = `fit-content`;
-            mainBox.style.width = `fit-content`;
+            fun();
         } else {
-            mainBox.style.height = `${h}vh`;
-            mainBox.style.width = `${w}vw`;
+            mainBox.style.minHeight = `${h}vh`;
+            mainBox.style.minWidth = `${w}vw`;
             h++;
             w++;
         }
@@ -97,13 +105,25 @@ function audioPause(){
 
 function questionAnswered(correct){
     question++;
-    renderQuestion();
     if(correct){
-        score++;
+        score += 1;
     }
+    renderQuestion();
 }
 
+// função pra resetar os pontos e ir pro menu
 function resetAndGoToMainMenu(){
+    question = 0;
     score = 0;
-    question = 1;
+    startButton.style.display = 'block';
+    helpButton.style.display = 'block';
+    mainBox.style.minWidth = 0;
+    mainBox.style.minHeight = 0;
+    mainBox.innerHTML = 
+    `
+    <div>
+        <h1>GAMING QUIZ</h1>
+        <h2>Teste seu conhecimento sobre jogos</h2>
+    </div>
+    `
 }
