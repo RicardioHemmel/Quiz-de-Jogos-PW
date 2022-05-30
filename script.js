@@ -79,7 +79,7 @@ function startQuiz(){
     }
 }
 
-const audio = new Audio('./public/audio/rickRoll.mp3');
+const audio = new Audio('./public/audio/PacManMusic.mp3');
 audio.volume = 0.2;
 
 function audioPlay(){
