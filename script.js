@@ -29,20 +29,36 @@ function renderQuestion(){
         case 2:
         mainBox.innerHTML = `
         <div class="headingContainer">
-            <h1>${question} - Quem é esse doido aí?</h1>
+            <h1>${question} - Quantos fantasmas tem no jogo Pac-Man?</h1>
         </div>
         <div class="imageContainer">
-            <img src="./public/img/jacket-hotline-miami.jpg">
+            <img src="./public/img/ghostQuestion.gif">
         </div>
         <div class="buttonsContainer">
-            <button onClick="questionAnswered(true)" class="optionButton questionButton">Alternativa A</button>
-            <button onClick="questionAnswered(false)" class="optionButton questionButton">Alternativa B</button>
-            <button onClick="questionAnswered(false)" class="optionButton questionButton">Alternativa C</button>
-            <button onClick="questionAnswered(false)" class="optionButton questionButton">Alternativa D</button>
+            <button onClick="questionAnswered(false)" class="optionButton questionButton">3</button>
+            <button onClick="questionAnswered(false)" class="optionButton questionButton">5</button>
+            <button onClick="questionAnswered(false)" class="optionButton questionButton">2</button>
+            <button onClick="questionAnswered(true)" class="optionButton questionButton">4</button>
         </div>
         `;
         break;
         case 3:
+        mainBox.innerHTML = `
+        <div class="headingContainer">
+            <h1>${question} - Qual é a empresa responsável pela criação do Minecraft?</h1>
+        </div>
+        <div class="imageContainer">
+            <img src="./public/img/minecraft.gif">
+        </div>
+        <div class="buttonsContainer">
+            <button onClick="questionAnswered(false)" class="optionButton questionButton">Activision</button>
+            <button onClick="questionAnswered(true)" class="optionButton questionButton">Mojang Studios</button>
+            <button onClick="questionAnswered(false)" class="optionButton questionButton">Epic Games</button>
+            <button onClick="questionAnswered(false)" class="optionButton questionButton">Supercell</button>
+        </div>
+        `;
+        break;
+        case 4:
             mainBox.innerHTML = `
             <p>Sua pontuação: ${score}</p>
             <br>
