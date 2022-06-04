@@ -34,7 +34,7 @@ function renderQuestion(){
         case 1:
     divQuestoes.innerHTML = `
         <div class="headingContainer">
-        <h1>${question} - Quem é esse doido aí?</h1>
+        <h1>${question} - Quem é esse personagem?</h1>
         </div>
         <div class="imageContainer">
             <img src="./public/img/jacket-hotline-miami.jpg">
