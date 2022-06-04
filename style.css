@@ -158,3 +158,11 @@ body{
 .headingContainer{
     margin-bottom: 2%;
 }
+
+#divQuestoes{
+    color: white;
+}
+
+#divQuestoes button{
+    color: white;
+}
