@@ -21,8 +21,18 @@
             <img onclick="audioPause()" id="pacManPause" class="pacMan" style="display:none" src="./public/img/pacman.png">
             <div id="mainBox" class="mainBox">
                 <div id="divInterna">
-                    <h1>GAMING QUIZ</h1> <!-- Nome do Quizz (Temporário por ora) -->
-                    <h2>Teste seu conhecimento sobre jogos</h2> <!-- Se quiserem mudar, eu mudo 🙂 -->
+                    <div id="menuPrincipal">
+                        <h1>GAMING QUIZ</h1> <!-- Nome do Quizz (Temporário por ora) -->
+                        <h2>Teste seu conhecimento sobre jogos</h2> <!-- Se quiserem mudar, eu mudo 🙂 -->
+                    </div>
+                    <div id="divQuestoes" style="display: none">
+                        <h1></h1>
+                    </div>
+                    <div id="divQuizFinalizado" style="display: none">
+                        <p>Sua pontuação: ${score}</p>
+                        <br>
+                        <button onclick="resetAndGoToMainMenu()" class="optionButton questionButton">Menu Principal</button>
+                    </div>
                 </div>
             </div>
             <div class="buttonContainer">

@@ -1,20 +1,40 @@
 var mainBox = document.getElementById('mainBox');
+var menuPrincipal = document.getElementById('menuPrincipal');
+var divQuestoes = document.getElementById('divQuestoes');
+var divQuizFinalizado = document.getElementById('divQuizFinalizado');
 var startButton = document.getElementById('startButton');
 var helpButton = document.getElementById('helpButton')
 var pacManPause = document.getElementById('pacManPause')
 var pacManPlay = document.getElementById('pacManPlay')
 
-var question = 0;
+var question = 1;
 var score = 0;
 
 // Html das questões
 function renderQuestion(){
     // O innerHTML serve pra escrever dentro do html (Nesse caso dentro da div mainBox)
-    switch (question){
-        case 0:
-    mainBox.innerHTML = `
+    divQuestoes.style.display = 'block';
+
+        divQuestoes.innerHTML = `
         <div class="headingContainer">
-        <h1>${question} - Quem é esse doido aí?</h1>
+        <h1>1 - Quem é esse personagem?</h1>
+        </div>
+        <div class="imageContainer">
+            <img src="./public/img/jacket-hotline-miami.jpg">
+        </div>
+        <div class="buttonsContainer">
+            <button onClick="questionAnswered(true)" class="optionButton questionButton">Jacket</button>
+            <button onClick="questionAnswered(false)" class="optionButton questionButton">Dallas</button>
+            <button onClick="questionAnswered(false)" class="optionButton questionButton">Solid Snake</button>
+            <button onClick="questionAnswered(false)" class="optionButton questionButton">Joel</button>
+        </div>
+        `;
+
+    switch (question){
+        case 1:
+    divQuestoes.innerHTML = `
+        <div class="headingContainer">
+        <h1>${question} - Quem é esse personagem?</h1>
         </div>
         <div class="imageContainer">
             <img src="./public/img/jacket-hotline-miami.jpg">
@@ -27,8 +47,8 @@ function renderQuestion(){
         </div>
         `;
         break;
-        case 1:
-        mainBox.innerHTML = `
+        case 2:
+        divQuestoes.innerHTML = `
         <div class="headingContainer">
             <h1>${question} - Quantos fantasmas tem no jogo Pac-Man?</h1>
         </div>
@@ -44,7 +64,7 @@ function renderQuestion(){
         `;
         break;
         case 3:
-        mainBox.innerHTML = `
+        divQuestoes.innerHTML = `
         <div class="headingContainer">
             <h1>${question} - Qual é a empresa responsável pela criação do Minecraft?</h1>
         </div>
@@ -60,11 +80,14 @@ function renderQuestion(){
         `;
         break;
         case 4:
-            mainBox.innerHTML = `
-            <p>Sua pontuação: ${score}</p>
-            <br>
-            <button onclick="resetAndGoToMainMenu()" class="optionButton questionButton">Menu Principal</button>
-        `;
+            divQuestoes.style.display = 'none';
+            divQuizFinalizado.style.display = "block";
+            divQuizFinalizado.innerHTML = `
+                <p>Sua pontuação: ${score}</p>
+                <br>
+                <button onclick="resetAndGoToMainMenu()" class="optionButton questionButton">Menu Principal</button>
+            `
+        ;
         break;
     }
     console.log(`question: ${question}`);
@@ -82,12 +105,12 @@ function renderInstructions(){
 function increaseMainBox(fun){
     // O .style (+ algum atributo tipo display ou backgroundColor) serve pra chamar algum atributo CSS da tag HTML
     // Com isso dá pra atribuir um valor nele q vai ser uma string, q nem aqui embaixo =)
+    menuPrincipal.style.display = 'none';
     startButton.style.display = 'none';
     helpButton.style.display = 'none';
     let id = null;
     let h = mainBox.style.minHeight;
     let w = mainBox.style.minWidth;
-    mainBox.innerHTML = '';
     clearInterval(id);
     id = setInterval(frame, 15);
     function frame(){
@@ -101,6 +124,9 @@ function increaseMainBox(fun){
             w++;
         }
     }
+    divQuestoes.style.display = 'block';
+    console.log(`question: ${question}`);
+    console.log(`score: ${score}`);
 }
 
 const audio = new Audio('./public/audio/PacManMusic.mp3');
@@ -122,24 +148,22 @@ function audioPause(){
 function questionAnswered(correct){
     question++;
     if(correct){
-        score += 1;
+        score ++;
     }
     renderQuestion();
 }
 
 // função pra resetar os pontos e ir pro menu
 function resetAndGoToMainMenu(){
-    question = 0;
+    question = 1;
     score = 0;
+    mainBox.style.minHeight = 0;
+    mainBox.style.minWidth = 0;
+    divQuestoes.style.display = 'none'
+    divQuizFinalizado.style.display = 'none'
     startButton.style.display = 'block';
     helpButton.style.display = 'block';
-    mainBox.style.minWidth = 0;
-    mainBox.style.minHeight = 0;
-    mainBox.innerHTML = 
-    `
-    <div>
-        <h1>GAMING QUIZ</h1>
-        <h2>Teste seu conhecimento sobre jogos</h2>
-    </div>
-    `
+    menuPrincipal.style.display = 'block'
+    console.log(`question: ${question}`);
+    console.log(`score: ${score}`);
 }
