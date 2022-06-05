@@ -83,6 +83,22 @@ function renderQuestion(){
         `;
         break;
         case 4:
+            divQuestoes.innerHTML = `
+            <div class="headingContainer">
+                <h1>${question} - THOAGP THOIAG THIAGPO THIAGO THIAGO THIAGO</h1>
+            </div>
+            <div class="imageContainer">
+                <img src="./public/img/minecraft.gif">
+            </div>
+            <div class="buttonsContainer">
+                <button onClick="questionAnswered(false)" class="optionButton questionButton">Activision</button>
+                <button onClick="questionAnswered(true)" class="optionButton questionButton">Mojang Studios</button>
+                <button onClick="questionAnswered(false)" class="optionButton questionButton">Epic Games</button>
+                <button onClick="questionAnswered(false)" class="optionButton questionButton">Supercell</button>
+            </div>
+            `;
+            break;
+        case 42323:
             divQuestoes.style.display = 'none';
             divQuizFinalizado.style.display = "block";
             divQuizFinalizado.innerHTML = `
