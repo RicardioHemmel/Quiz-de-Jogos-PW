@@ -6,6 +6,7 @@ var startButton = document.getElementById('startButton');
 var helpButton = document.getElementById('helpButton')
 var pacManPause = document.getElementById('pacManPause')
 var pacManPlay = document.getElementById('pacManPlay')
+var divInstrucoes = document.getElementById('divInstrucoes')
 // var alterarBulba = document.getElementById('blackBulba')
 // alterarBulba.setAttribute('src', 'bulbasaur-pokemon.gif')
 
@@ -98,10 +99,8 @@ function renderQuestion(){
 
 // Html das instruções
 function renderInstructions(){
-    mainBox.innerHTML = 
-    `
-    <h1>Instruções</h1>
-    `
+    menuPrincipal.style.display = 'none';
+    divInstrucoes.style.display = 'block';
 }
 
 function increaseMainBox(fun){
