@@ -6,6 +6,8 @@ var startButton = document.getElementById('startButton');
 var helpButton = document.getElementById('helpButton')
 var pacManPause = document.getElementById('pacManPause')
 var pacManPlay = document.getElementById('pacManPlay')
+// var alterarBulba = document.getElementById('blackBulba')
+// alterarBulba.setAttribute('src', 'bulbasaur-pokemon.gif')
 
 var question = 1;
 var score = 0;
@@ -17,16 +19,16 @@ function renderQuestion(){
 
         divQuestoes.innerHTML = `
         <div class="headingContainer">
-        <h1>1 - Quem é esse personagem?</h1>
+        <h1>1 - Quem é esse pokemón?</h1>
         </div>
         <div class="imageContainer">
-            <img src="./public/img/jacket-hotline-miami.jpg">
+            <img class="blackBulba" src="./public/img/bulbassauroCensured.gif">
         </div>
         <div class="buttonsContainer">
-            <button onClick="questionAnswered(true)" class="optionButton questionButton">Jacket</button>
-            <button onClick="questionAnswered(false)" class="optionButton questionButton">Dallas</button>
-            <button onClick="questionAnswered(false)" class="optionButton questionButton">Solid Snake</button>
-            <button onClick="questionAnswered(false)" class="optionButton questionButton">Joel</button>
+            <button onClick="questionAnswered(true)" class="optionButton questionButton">Pikachu</button>
+            <button onClick="questionAnswered(false)" class="optionButton questionButton">Snorlax</button>
+            <button onClick="questionAnswered(false)" class="optionButton questionButton">Bulbasauro</button>
+            <button onClick="questionAnswered(false)" class="optionButton questionButton">Magikarp</button>
         </div>
         `;
 
@@ -34,16 +36,16 @@ function renderQuestion(){
         case 1:
     divQuestoes.innerHTML = `
         <div class="headingContainer">
-        <h1>${question} - Quem é esse personagem?</h1>
+        <h1>${question} - Quem é esse Pokemón?</h1>
         </div>
         <div class="imageContainer">
-            <img src="./public/img/jacket-hotline-miami.jpg">
+            <img class="blackBulba" src="./public/img/bulbassauroCensured.gif">
         </div>
         <div class="buttonsContainer">
-            <button onClick="questionAnswered(true)" class="optionButton questionButton">Jacket</button>
-            <button onClick="questionAnswered(false)" class="optionButton questionButton">Dallas</button>
-            <button onClick="questionAnswered(false)" class="optionButton questionButton">Solid Snake</button>
-            <button onClick="questionAnswered(false)" class="optionButton questionButton">Joel</button>
+            <button onClick="questionAnswered(true)" class="optionButton questionButton">Pikachu</button>
+            <button onClick="questionAnswered(false)" class="optionButton questionButton">Snorlax</button>
+            <button onClick="questionAnswered(false)" class="optionButton questionButton">Bulbasauro</button>
+            <button onClick="questionAnswered(false)" class="optionButton questionButton">Magikarp</button>
         </div>
         `;
         break;
@@ -150,7 +152,7 @@ function questionAnswered(correct){
     if(correct){
         score ++;
     }
-    renderQuestion();
+    setTimeout(renderQuestion, 2.0*1000);
 }
 
 // função pra resetar os pontos e ir pro menu
