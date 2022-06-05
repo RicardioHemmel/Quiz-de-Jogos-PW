@@ -16,6 +16,9 @@ var score = 0;
 // Html das questões
 function renderQuestion(){
     // O innerHTML serve pra escrever dentro do html (Nesse caso dentro da div mainBox)
+
+    menuPrincipal.style.display = 'none';
+    divInstrucoes.style.display = 'none';
     divQuestoes.style.display = 'block';
 
         divQuestoes.innerHTML = `
@@ -98,7 +101,7 @@ function renderQuestion(){
             </div>
             `;
             break;
-        case 42323:
+        case 5:
             divQuestoes.style.display = 'none';
             divQuizFinalizado.style.display = "block";
             divQuizFinalizado.innerHTML = `
@@ -116,6 +119,7 @@ function renderQuestion(){
 // Html das instruções
 function renderInstructions(){
     menuPrincipal.style.display = 'none';
+    divQuestoes.style.display = 'none';
     divInstrucoes.style.display = 'block';
 }
 
@@ -129,7 +133,7 @@ function increaseMainBox(fun){
     let h = mainBox.style.minHeight;
     let w = mainBox.style.minWidth;
     clearInterval(id);
-    id = setInterval(frame, 15);
+    id = setInterval(frame, 7);
     function frame(){
         if (h == 55 || w == 65){
             clearInterval(id);
@@ -141,9 +145,7 @@ function increaseMainBox(fun){
             w++;
         }
     }
-    divQuestoes.style.display = 'block';
-    console.log(`question: ${question}`);
-    console.log(`score: ${score}`);
+    fun();
 }
 
 const audio = new Audio('./public/audio/PacManMusic.mp3');
@@ -176,11 +178,15 @@ function resetAndGoToMainMenu(){
     score = 0;
     mainBox.style.minHeight = 0;
     mainBox.style.minWidth = 0;
-    divQuestoes.style.display = 'none'
-    divQuizFinalizado.style.display = 'none'
+
+    divQuestoes.style.display = 'none';
+    divQuizFinalizado.style.display = 'none';
+    divInstrucoes.style.display = 'none';
+
     startButton.style.display = 'block';
     helpButton.style.display = 'block';
     menuPrincipal.style.display = 'block'
+
     console.log(`question: ${question}`);
     console.log(`score: ${score}`);
 }
