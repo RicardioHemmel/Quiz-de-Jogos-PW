@@ -127,6 +127,8 @@ function increaseMainBox(fun){
     // O .style (+ algum atributo tipo display ou backgroundColor) serve pra chamar algum atributo CSS da tag HTML
     // Com isso dá pra atribuir um valor nele q vai ser uma string, q nem aqui embaixo =)
     menuPrincipal.style.display = 'none';
+    
+
     startButton.style.display = 'none';
     helpButton.style.display = 'none';
     let id = null;
@@ -135,7 +137,7 @@ function increaseMainBox(fun){
     clearInterval(id);
     id = setInterval(frame, 7);
     function frame(){
-        if (h == 55 || w == 65){
+        if (h == 45 || w == 70){
             clearInterval(id);
             fun();
         } else {
