@@ -4,6 +4,7 @@ var divQuestoes = document.getElementById('divQuestoes');
 var divQuizFinalizado = document.getElementById('divQuizFinalizado');
 var startButton = document.getElementById('startButton');
 var helpButton = document.getElementById('helpButton')
+var creditsButton = document.getElementById('creditsButton')
 var pacManPause = document.getElementById('pacManPause')
 var pacManPlay = document.getElementById('pacManPlay')
 var divInstrucoes = document.getElementById('divInstrucoes')
@@ -42,6 +43,7 @@ function renderQuestion(){
 
     menuPrincipal.style.display = 'none';
     divInstrucoes.style.display = 'none';
+    divCreditos.style.display = 'none';
     divQuestoes.style.display = 'block';
 
     switch (question){
@@ -114,7 +116,15 @@ function renderQuestion(){
 function renderInstructions(){
     menuPrincipal.style.display = 'none';
     divQuestoes.style.display = 'none';
+    divCreditos.style.display = 'none';
     divInstrucoes.style.display = 'block';
+}
+
+function renderCredits(){
+    menuPrincipal.style.display = 'none';
+    divQuestoes.style.display = 'none';
+    divInstrucoes.style.display = 'none';
+    divCreditos.style.display = 'block';
 }
 
 function increaseMainBox(fun){
@@ -122,9 +132,10 @@ function increaseMainBox(fun){
     // Com isso dá pra atribuir um valor nele q vai ser uma string, q nem aqui embaixo =)
     menuPrincipal.style.display = 'none';
     
-
     startButton.style.display = 'none';
     helpButton.style.display = 'none';
+    creditsButton.style.display = 'none';
+
     let id = null;
     let h = mainBox.style.minHeight;
     let w = mainBox.style.minWidth;
@@ -242,10 +253,12 @@ function resetAndGoToMainMenu(){
     divQuestoes.style.display = 'none';
     divQuizFinalizado.style.display = 'none';
     divInstrucoes.style.display = 'none';
+    divCreditos.style.display = 'none'
 
     startButton.style.display = 'block';
     helpButton.style.display = 'block';
-    menuPrincipal.style.display = 'block'
+    menuPrincipal.style.display = 'block';
+    creditsButton.style.display = 'block';
 
     console.log(`question: ${question}`);
     console.log(`score: ${score}`);
