@@ -7,6 +7,7 @@ var helpButton = document.getElementById('helpButton')
 var pacManPause = document.getElementById('pacManPause')
 var pacManPlay = document.getElementById('pacManPlay')
 var divInstrucoes = document.getElementById('divInstrucoes')
+var divOptions = document.getElementById(buttonsContainer).querySelectorAll('.questionButton');
 // var alterarBulba = document.getElementById('blackBulba')
 // alterarBulba.setAttribute('src', 'bulbasaur-pokemon.gif')
 
@@ -28,7 +29,7 @@ function renderQuestion(){
         <div class="imageContainer">
             <img class="blackBulba" src="./public/img/bulbassauroCensured.gif">
         </div>
-        <div class="buttonsContainer">
+        <div id="divOptions" class="buttonsContainer">
             <button onClick="questionAnswered(true)" class="optionButton questionButton">Pikachu</button>
             <button onClick="questionAnswered(false)" class="optionButton questionButton">Snorlax</button>
             <button onClick="questionAnswered(false)" class="optionButton questionButton">Bulbasauro</button>
@@ -61,7 +62,7 @@ function renderQuestion(){
         <div class="imageContainer">
             <img src="./public/img/ghostQuestion.gif">
         </div>
-        <div class="buttonsContainer">
+        <div id="divOptions" class="buttonsContainer">
             <button onClick="questionAnswered(false)" class="optionButton questionButton">3 Fantasmas</button>
             <button onClick="questionAnswered(false)" class="optionButton questionButton">5 Fantasmas</button>
             <button onClick="questionAnswered(false)" class="optionButton questionButton">2 Fantasmas</button>
@@ -77,7 +78,7 @@ function renderQuestion(){
         <div class="imageContainer">
             <img src="./public/img/minecraft.gif">
         </div>
-        <div class="buttonsContainer">
+        <div id="divOptions" class="buttonsContainer">
             <button onClick="questionAnswered(false)" class="optionButton questionButton">Activision</button>
             <button onClick="questionAnswered(true)" class="optionButton questionButton">Mojang Studios</button>
             <button onClick="questionAnswered(false)" class="optionButton questionButton">Epic Games</button>
@@ -93,7 +94,7 @@ function renderQuestion(){
         <div class="imageContainer">
             <img src="./public/img/minecraft.gif">
         </div>
-        <div class="buttonsContainer">
+        <div id="divOptions" class="buttonsContainer">
             <button onClick="questionAnswered(false)" class="optionButton questionButton">Half-Life: Alyx</button>
             <button onClick="questionAnswered(false)" class="optionButton questionButton">The Sims 4</button>
             <button onClick="questionAnswered(false)" class="optionButton questionButton">The Last of Us Part II</button>
@@ -109,7 +110,7 @@ function renderQuestion(){
         <div class="imageContainer">
             <img src="./public/img/minecraft.gif">
         </div>
-        <div class="buttonsContainer">
+        <div id="divOptions" class="buttonsContainer">
             <button onClick="questionAnswered(false)" class="optionButton questionButton">Raiden</button>
             <button onClick="questionAnswered(false)" class="optionButton questionButton">Jacket</button>
             <button onClick="questionAnswered(false)" class="optionButton questionButton">Dallas</button>
@@ -125,7 +126,7 @@ function renderQuestion(){
         <div class="imageContainer">
             <img src="./public/img/minecraft.gif">
         </div>
-        <div class="buttonsContainer">
+        <div id="divOptions" class="buttonsContainer">
             <button onClick="questionAnswered(false)" class="optionButton questionButton">Portal 2</button>
             <button onClick="questionAnswered(false)" class="optionButton questionButton">PayDay 2</button>
             <button onClick="questionAnswered(true)" class="optionButton questionButton">The Last of Us Part II</button>
@@ -141,7 +142,7 @@ function renderQuestion(){
         <div class="imageContainer">
             <img src="./public/img/minecraft.gif">
         </div>
-        <div class="buttonsContainer">
+        <div id="divOptions" class="buttonsContainer">
             <button onClick="questionAnswered(false)" class="optionButton questionButton">Fall Guys</button>
             <button onClick="questionAnswered(false)" class="optionButton questionButton">Fallout 75</button>
             <button onClick="questionAnswered(false)" class="optionButton questionButton">Metal Gear Survive</button>
@@ -157,7 +158,7 @@ function renderQuestion(){
         <div class="imageContainer">
             <img src="./public/img/minecraft.gif">
         </div>
-        <div class="buttonsContainer">
+        <div id="divOptions" class="buttonsContainer">
             <button onClick="questionAnswered(false)" class="optionButton questionButton">Metal Gear Rising: Revengeance</button>
             <button onClick="questionAnswered(true)" class="optionButton questionButton">Devil May Cry</button>
             <button onClick="questionAnswered(false)" class="optionButton questionButton">Sekiro: Shadows Die Twice</button>
@@ -173,7 +174,7 @@ function renderQuestion(){
         <div class="imageContainer">
             <img src="./public/img/minecraft.gif">
         </div>
-        <div class="buttonsContainer">
+        <div id="divOptions" class="buttonsContainer">
             <button onClick="questionAnswered(false)" class="optionButton questionButton">Precisa descer em crateras para explorar.</button>
             <button onClick="questionAnswered(true)" class="optionButton questionButton">Joga contra tubarões e com outros jogadores enquanto resgata ouro.</button>
             <button onClick="questionAnswered(false)" class="optionButton questionButton">Cria uma base, explora o mundo e enfrenta uma diversidade de inimigos.</button>
@@ -189,7 +190,7 @@ function renderQuestion(){
         <div class="imageContainer">
             <img src="./public/img/minecraft.gif">
         </div>
-        <div class="buttonsContainer">
+        <div id="divOptions" class="buttonsContainer">
             <button onClick="questionAnswered(false)" class="optionButton questionButton">Greyfox</button>
             <button onClick="questionAnswered(true)" class="optionButton questionButton">Snake</button>
             <button onClick="questionAnswered(false)" class="optionButton questionButton">Kazuhira Müller</button>
@@ -267,6 +268,9 @@ function questionAnswered(correct){
     if(correct){
         score ++;
     }
+
+    divOptions[1].style.backgroundColor = 'red';
+
     setTimeout(renderQuestion, 2.0*1000);
 }
 
