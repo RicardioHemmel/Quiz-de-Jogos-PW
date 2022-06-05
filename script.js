@@ -101,16 +101,6 @@ function renderQuestion(){
             </div>
             `;
             break;
-        case 5:
-            divQuestoes.style.display = 'none';
-            divQuizFinalizado.style.display = "block";
-            divQuizFinalizado.innerHTML = `
-                <p>Sua pontuação: ${score}</p>
-                <br>
-                <button onclick="resetAndGoToMainMenu()" class="optionButton questionButton">Menu Principal</button>
-            `
-        ;
-        break;
     }
     console.log(`question: ${question}`);
     console.log(`score: ${score}`);
