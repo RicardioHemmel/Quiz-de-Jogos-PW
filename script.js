@@ -7,9 +7,19 @@ var helpButton = document.getElementById('helpButton')
 var pacManPause = document.getElementById('pacManPause')
 var pacManPlay = document.getElementById('pacManPlay')
 var divInstrucoes = document.getElementById('divInstrucoes')
-var divOptions = document.getElementById(buttonsContainer).querySelectorAll('.questionButton');
 // var alterarBulba = document.getElementById('blackBulba')
 // alterarBulba.setAttribute('src', 'bulbasaur-pokemon.gif')
+
+var question1 = document.getElementById('question1');
+var question2 = document.getElementById('question2');
+var question3 = document.getElementById('question3');
+var question4 = document.getElementById('question4');
+var question5 = document.getElementById('question5');
+var question6 = document.getElementById('question6');
+var question7 = document.getElementById('question7');
+var question8 = document.getElementById('question8');
+var question9 = document.getElementById('question9');
+var question10 = document.getElementById('question10');
 
 var question = 1;
 var score = 0;
@@ -22,191 +32,66 @@ function renderQuestion(){
     divInstrucoes.style.display = 'none';
     divQuestoes.style.display = 'block';
 
-        divQuestoes.innerHTML = `
-        <div class="headingContainer">
-        <h1>1 - Quem é esse pokemón?</h1>
-        </div>
-        <div class="imageContainer">
-            <img class="blackBulba" src="./public/img/bulbassauroCensured.gif">
-        </div>
-        <div id="divOptions" class="buttonsContainer">
-            <button onClick="questionAnswered(true)" class="optionButton questionButton">Pikachu</button>
-            <button onClick="questionAnswered(false)" class="optionButton questionButton">Snorlax</button>
-            <button onClick="questionAnswered(false)" class="optionButton questionButton">Bulbasauro</button>
-            <button onClick="questionAnswered(false)" class="optionButton questionButton">Magikarp</button>
-        </div>
-        `;
-
     switch (question){
         case 1:
-    divQuestoes.innerHTML = `
-        <div class="headingContainer">
-        <h1>${question} - Quem é esse Pokemón?</h1>
-        </div>
-        <div class="imageContainer">
-            <img class="blackBulba" src="./public/img/bulbassauroCensured.gif">
-        </div>
-        <div class="buttonsContainer">
-            <button onClick="questionAnswered(true)" class="optionButton questionButton">Pikachu</button>
-            <button onClick="questionAnswered(false)" class="optionButton questionButton">Snorlax</button>
-            <button onClick="questionAnswered(false)" class="optionButton questionButton">Bulbasauro</button>
-            <button onClick="questionAnswered(false)" class="optionButton questionButton">Magikarp</button>
-        </div>
-        `;
+            // Q1
+            question1.style.display = 'block';
         break;
         case 2:
-        divQuestoes.innerHTML = `
-        <div class="headingContainer">
-            <h1>${question} - Quantos fantasmas tem no jogo Pac-Man?</h1>
-        </div>
-        <div class="imageContainer">
-            <img src="./public/img/ghostQuestion.gif">
-        </div>
-        <div id="divOptions" class="buttonsContainer">
-            <button onClick="questionAnswered(false)" class="optionButton questionButton">3 Fantasmas</button>
-            <button onClick="questionAnswered(false)" class="optionButton questionButton">5 Fantasmas</button>
-            <button onClick="questionAnswered(false)" class="optionButton questionButton">2 Fantasmas</button>
-            <button onClick="questionAnswered(true)" class="optionButton questionButton">4 Fantasmas</button>
-        </div>
-        `;
+            // Q2
+            question1.style.display = 'none';
+            question2.style.display = 'block';
         break;
         case 3:
-        divQuestoes.innerHTML = `
-        <div class="headingContainer">
-            <h1>${question} - Qual é a empresa responsável pela criação do Minecraft?</h1>
-        </div>
-        <div class="imageContainer">
-            <img src="./public/img/minecraft.gif">
-        </div>
-        <div id="divOptions" class="buttonsContainer">
-            <button onClick="questionAnswered(false)" class="optionButton questionButton">Activision</button>
-            <button onClick="questionAnswered(true)" class="optionButton questionButton">Mojang Studios</button>
-            <button onClick="questionAnswered(false)" class="optionButton questionButton">Epic Games</button>
-            <button onClick="questionAnswered(false)" class="optionButton questionButton">Supercell</button>
-        </div>
-        `;
+            // Q3
+            question2.style.display = 'none';
+            question3.style.display = 'block';
         break;
         case 4:
-        divQuestoes.innerHTML = `
-        <div class="headingContainer">
-            <h1>${question} - Dentre estes jogos qual é o mais caro, incluído com as DLCs?</h1>
-        </div>
-        <div class="imageContainer">
-            <img src="./public/img/minecraft.gif">
-        </div>
-        <div id="divOptions" class="buttonsContainer">
-            <button onClick="questionAnswered(false)" class="optionButton questionButton">Half-Life: Alyx</button>
-            <button onClick="questionAnswered(false)" class="optionButton questionButton">The Sims 4</button>
-            <button onClick="questionAnswered(false)" class="optionButton questionButton">The Last of Us Part II</button>
-            <button onClick="questionAnswered(true)" class="optionButton questionButton">Train Simulator</button>
-        </div>
-        `;
+            // Q4
+            question3.style.display = 'none';
+            question4.style.display = 'block';
         break;
         case 5:
-            divQuestoes.innerHTML = `
-        <div class="headingContainer">
-            <h1>${question} - Quem é este personagem?</h1>
-        </div>
-        <div class="imageContainer">
-            <img src="./public/img/minecraft.gif">
-        </div>
-        <div id="divOptions" class="buttonsContainer">
-            <button onClick="questionAnswered(false)" class="optionButton questionButton">Raiden</button>
-            <button onClick="questionAnswered(false)" class="optionButton questionButton">Jacket</button>
-            <button onClick="questionAnswered(false)" class="optionButton questionButton">Dallas</button>
-            <button onClick="questionAnswered(true)" class="optionButton questionButton">Gordon Freeman</button>
-        </div>
-        `;
+            // Q5
+            question4.style.display = 'none';
+            question5.style.display = 'block';
         break;
         case 6:
-            divQuestoes.innerHTML = `
-        <div class="headingContainer">
-            <h1>${question} - Em qual desses jogos o protagonista morre em sua continuação?</h1>
-        </div>
-        <div class="imageContainer">
-            <img src="./public/img/minecraft.gif">
-        </div>
-        <div id="divOptions" class="buttonsContainer">
-            <button onClick="questionAnswered(false)" class="optionButton questionButton">Portal 2</button>
-            <button onClick="questionAnswered(false)" class="optionButton questionButton">PayDay 2</button>
-            <button onClick="questionAnswered(true)" class="optionButton questionButton">The Last of Us Part II</button>
-            <button onClick="questionAnswered(false)" class="optionButton questionButton">Half-Life 2</button>
-        </div>
-        `;
+            // Q6
+            question5.style.display = 'none';
+            question6.style.display = 'block';
         break;
         case 7:
-            divQuestoes.innerHTML = `
-        <div class="headingContainer">
-            <h1>${question} - Qual desses jogos possui a menor nota de review?</h1>
-        </div>
-        <div class="imageContainer">
-            <img src="./public/img/minecraft.gif">
-        </div>
-        <div id="divOptions" class="buttonsContainer">
-            <button onClick="questionAnswered(false)" class="optionButton questionButton">Fall Guys</button>
-            <button onClick="questionAnswered(false)" class="optionButton questionButton">Fallout 75</button>
-            <button onClick="questionAnswered(false)" class="optionButton questionButton">Metal Gear Survive</button>
-            <button onClick="questionAnswered(true)" class="optionButton questionButton">Grand Theft Auto: The Trilogy - The Definitive Edition</button>
-        </div>
-        `;
+            // Q7
+            question6.style.display = 'none';
+            question7.style.display = 'block';
         break;
         case 8:
-        divQuestoes.innerHTML = `
-        <div class="headingContainer">
-            <h1>${question} - Em qual desses jogos Hack 'n Slash você consegue fazer combos com seus golpes pontuando do E ao S?</h1>
-        </div>
-        <div class="imageContainer">
-            <img src="./public/img/minecraft.gif">
-        </div>
-        <div id="divOptions" class="buttonsContainer">
-            <button onClick="questionAnswered(false)" class="optionButton questionButton">Metal Gear Rising: Revengeance</button>
-            <button onClick="questionAnswered(true)" class="optionButton questionButton">Devil May Cry</button>
-            <button onClick="questionAnswered(false)" class="optionButton questionButton">Sekiro: Shadows Die Twice</button>
-            <button onClick="questionAnswered(false)" class="optionButton questionButton">Katana Zero</button>
-        </div>
-        `;
+            // Q8
+            question7.style.display = 'none';
+            question8.style.display = 'block';
         break;
         case 9:
-            divQuestoes.innerHTML = `
-        <div class="headingContainer">
-            <h1>${question} - Depth é um jogo em que o jogador:</h1>
-        </div>
-        <div class="imageContainer">
-            <img src="./public/img/minecraft.gif">
-        </div>
-        <div id="divOptions" class="buttonsContainer">
-            <button onClick="questionAnswered(false)" class="optionButton questionButton">Precisa descer em crateras para explorar.</button>
-            <button onClick="questionAnswered(true)" class="optionButton questionButton">Joga contra tubarões e com outros jogadores enquanto resgata ouro.</button>
-            <button onClick="questionAnswered(false)" class="optionButton questionButton">Cria uma base, explora o mundo e enfrenta uma diversidade de inimigos.</button>
-            <button onClick="questionAnswered(false)" class="optionButton questionButton">Tem que chegar o mais longe possível em uma masmorra.</button>
-        </div>
-        `;
+            // Q9
+            question8.style.display = 'none';
+            question9.style.display = 'block';
         break;
         case 10:
-            divQuestoes.innerHTML = `
-        <div class="headingContainer">
-            <h1>${question} - Quem é o antagonista principal de Metal Gear Solid V: The Phantom Pain?</h1>
-        </div>
-        <div class="imageContainer">
-            <img src="./public/img/minecraft.gif">
-        </div>
-        <div id="divOptions" class="buttonsContainer">
-            <button onClick="questionAnswered(false)" class="optionButton questionButton">Greyfox</button>
-            <button onClick="questionAnswered(true)" class="optionButton questionButton">Snake</button>
-            <button onClick="questionAnswered(false)" class="optionButton questionButton">Kazuhira Müller</button>
-            <button onClick="questionAnswered(false)" class="optionButton questionButton">Skull Face</button>
-        </div>
-        `;
+            // Q10
+            question9.style.display = 'none';
+            question10.style.display = 'block';
         break;
         case 11:
+            question10.style.display = 'none';
             divQuestoes.style.display = 'none';
             divQuizFinalizado.style.display = "block";
-            divQuizFinalizado.innerHTML = `
-            <p>Sua pontuação: ${score}</p>
-            <br>
-            <button onclick="resetAndGoToMainMenu()" class="optionButton questionButton">Menu Principal</button>
+            divQuizFinalizado.innerHTML = 
             `
-            ;
+                <p>Sua pontuação: ${score}</p>
+                <br>
+                <button onclick="resetAndGoToMainMenu()" class="optionButton questionButton">Menu Principal</button>
+            `
         break;
     }
     console.log(`question: ${question}`);
@@ -266,12 +151,9 @@ function audioPause(){
 function questionAnswered(correct){
     question++;
     if(correct){
-        score ++;
+        score++;
     }
-
-    divOptions[1].style.backgroundColor = 'red';
-
-    setTimeout(renderQuestion, 2.0*1000);
+    renderQuestion();
 }
 
 // função pra resetar os pontos e ir pro menu
