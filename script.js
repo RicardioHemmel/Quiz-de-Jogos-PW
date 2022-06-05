@@ -23,10 +23,10 @@ function renderQuestion(){
             <img src="./public/img/jacket-hotline-miami.jpg">
         </div>
         <div class="buttonsContainer">
-            <button onClick="questionAnswered(true)" class="optionButton questionButton">Jacket</button>
-            <button onClick="questionAnswered(false)" class="optionButton questionButton">Dallas</button>
-            <button onClick="questionAnswered(false)" class="optionButton questionButton">Solid Snake</button>
-            <button onClick="questionAnswered(false)" class="optionButton questionButton">Joel</button>
+            <button id="correctQuestion" onClick="questionAnswered(true)" class="optionButton questionButton">Jacket</button>
+            <button onClick="questionAnswered(false)" class="optionButton questionButton wrongButton">Dallas</button>
+            <button onClick="questionAnswered(false)" class="optionButton questionButton wrongButton">Solid Snake</button>
+            <button onClick="questionAnswered(false)" class="optionButton questionButton wrongButton">Joel</button>
         </div>
         `;
 
@@ -40,10 +40,10 @@ function renderQuestion(){
             <img src="./public/img/jacket-hotline-miami.jpg">
         </div>
         <div class="buttonsContainer">
-            <button onClick="questionAnswered(true)" class="optionButton questionButton">Jacket</button>
-            <button onClick="questionAnswered(false)" class="optionButton questionButton">Dallas</button>
-            <button onClick="questionAnswered(false)" class="optionButton questionButton">Solid Snake</button>
-            <button onClick="questionAnswered(false)" class="optionButton questionButton">Joel</button>
+            <button id="correctQuestion" onClick="questionAnswered(true)" class="optionButton questionButton">Jacket</button>
+            <button onClick="questionAnswered(false)" class="optionButton questionButton wrongButton">Dallas</button>
+            <button onClick="questionAnswered(false)" class="optionButton questionButton wrongButton">Solid Snake</button>
+            <button onClick="questionAnswered(false)" class="optionButton questionButton wrongButton">Joel</button>
         </div>
         `;
         break;
@@ -56,10 +56,10 @@ function renderQuestion(){
             <img src="./public/img/ghostQuestion.gif">
         </div>
         <div class="buttonsContainer">
-            <button onClick="questionAnswered(false)" class="optionButton questionButton">3 Fantasmas</button>
-            <button onClick="questionAnswered(false)" class="optionButton questionButton">5 Fantasmas</button>
-            <button onClick="questionAnswered(false)" class="optionButton questionButton">2 Fantasmas</button>
-            <button onClick="questionAnswered(true)" class="optionButton questionButton">4 Fantasmas</button>
+            <button onClick="questionAnswered(false)" class="optionButton questionButton wrongButton">3 Fantasmas</button>
+            <button onClick="questionAnswered(false)" class="optionButton questionButton wrongButton">5 Fantasmas</button>
+            <button onClick="questionAnswered(false)" class="optionButton questionButton wrongButton">2 Fantasmas</button>
+            <button id="correctQuestion" onClick="questionAnswered(true)" class="optionButton questionButton">4 Fantasmas</button>
         </div>
         `;
         break;
@@ -72,10 +72,10 @@ function renderQuestion(){
             <img src="./public/img/minecraft.gif">
         </div>
         <div class="buttonsContainer">
-            <button onClick="questionAnswered(false)" class="optionButton questionButton">Activision</button>
-            <button onClick="questionAnswered(true)" class="optionButton questionButton">Mojang Studios</button>
-            <button onClick="questionAnswered(false)" class="optionButton questionButton">Epic Games</button>
-            <button onClick="questionAnswered(false)" class="optionButton questionButton">Supercell</button>
+            <button onClick="questionAnswered(false)" class="optionButton questionButton wrongButton">Activision</button>
+            <button id="correctQuestion" onClick="questionAnswered(true)" class="optionButton questionButton">Mojang Studios</button>
+            <button onClick="questionAnswered(false)" class="optionButton questionButton wrongButton">Epic Games</button>
+            <button onClick="questionAnswered(false)" class="optionButton questionButton wrongButton">Supercell</button>
         </div>
         `;
         break;
@@ -112,7 +112,7 @@ function increaseMainBox(fun){
     let h = mainBox.style.minHeight;
     let w = mainBox.style.minWidth;
     clearInterval(id);
-    id = setInterval(frame, 15);
+    id = setInterval(frame, 10);
     function frame(){
         if (h == 55 || w == 65){
             clearInterval(id);
@@ -125,8 +125,6 @@ function increaseMainBox(fun){
         }
     }
     divQuestoes.style.display = 'block';
-    console.log(`question: ${question}`);
-    console.log(`score: ${score}`);
 }
 
 const audio = new Audio('./public/audio/PacManMusic.mp3');
@@ -145,12 +143,12 @@ function audioPause(){
     pacManPlay.style.display = 'block';
 }
 
-function questionAnswered(correct){
+function questionAnswered(correct){ 
     question++;
     if(correct){
-        score ++;
+        score++;
     }
-    renderQuestion();
+    setTimeout(renderQuestion, 2.0*1000);
 }
 
 // função pra resetar os pontos e ir pro menu
@@ -164,6 +162,4 @@ function resetAndGoToMainMenu(){
     startButton.style.display = 'block';
     helpButton.style.display = 'block';
     menuPrincipal.style.display = 'block'
-    console.log(`question: ${question}`);
-    console.log(`score: ${score}`);
 }
