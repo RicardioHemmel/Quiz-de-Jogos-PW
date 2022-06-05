@@ -7,6 +7,18 @@ var helpButton = document.getElementById('helpButton')
 var pacManPause = document.getElementById('pacManPause')
 var pacManPlay = document.getElementById('pacManPlay')
 var divInstrucoes = document.getElementById('divInstrucoes')
+
+var question1Options = document.getElementById('question1Options').querySelectorAll('.questionButton');
+var question2Options = document.getElementById('question2Options').querySelectorAll('.questionButton');
+// var question3Options = document.getElementById('question3Options').querySelectorAll('.questionButton');
+// var question4Options = document.getElementById('question4Options').querySelectorAll('.questionButton');
+// var question5Options = document.getElementById('question5Options').querySelectorAll('.questionButton');
+// var question6Options = document.getElementById('question6Options').querySelectorAll('.questionButton');
+// var question7Options = document.getElementById('question7Options').querySelectorAll('.questionButton');
+// var question8Options = document.getElementById('question8Options').querySelectorAll('.questionButton');
+// var question9Options = document.getElementById('question9Options').querySelectorAll('.questionButton');
+// var question10Options = document.getElementById('question10Options').querySelectorAll('.questionButton');
+
 // var alterarBulba = document.getElementById('blackBulba')
 // alterarBulba.setAttribute('src', 'bulbasaur-pokemon.gif')
 
@@ -149,11 +161,27 @@ function audioPause(){
 }
 
 function questionAnswered(correct){
+    switch (question){
+        case 1:
+            question1Options[0].style.backgroundColor = 'green';
+            question1Options[1].style.backgroundColor = 'red';
+            question1Options[2].style.backgroundColor = 'red';
+            question1Options[3].style.backgroundColor = 'red';
+        break;
+        case 2:
+            question2Options[0].style.backgroundColor = 'red';
+            question2Options[1].style.backgroundColor = 'red';
+            question2Options[2].style.backgroundColor = 'red';
+            question2Options[3].style.backgroundColor = 'green';
+        break;
+    }
+    
     question++;
+
     if(correct){
         score++;
     }
-    renderQuestion();
+    setTimeout(renderQuestion, 2.0*1000);
 }
 
 // função pra resetar os pontos e ir pro menu
