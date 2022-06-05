@@ -102,7 +102,7 @@ function renderQuestion(){
             `
                 <p>Sua pontuação: ${score}</p>
                 <br>
-                <button onclick="resetAndGoToMainMenu()" class="optionButton questionButton">Menu Principal</button>
+                <button onclick="reloadPage()" class="optionButton questionButton">Menu Principal</button>
             `
         break;
     }
@@ -249,4 +249,8 @@ function resetAndGoToMainMenu(){
 
     console.log(`question: ${question}`);
     console.log(`score: ${score}`);
+}
+
+function reloadPage(){
+    document.location.reload();
 }
