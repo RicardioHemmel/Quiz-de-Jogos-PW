@@ -169,58 +169,58 @@ function questionAnswered(correct){  //SFJUOHSDOFUHDSFOIUPHSDFOIUHDSFIUOHDSFOISU
             question1Options[3].classList.add('optionButtonWrong');
         break;
         case 2:
-            question2Options[0].style.backgroundColor = 'red';
-            question2Options[1].style.backgroundColor = 'red';
-            question2Options[2].style.backgroundColor = 'red';
-            question2Options[3].style.backgroundColor = 'red';
+            question2Options[0].classList.add('optionButtonWrong');
+            question2Options[1].classList.add('optionButtonWrong');
+            question2Options[2].classList.add('optionButtonWrong');
+            question2Options[3].classList.add('optionButtonCorrect');
         break;
         case 3:
-            question3Options[0].style.backgroundColor = 'red';
-            question3Options[1].style.backgroundColor = 'red';
-            question3Options[2].style.backgroundColor = 'red';
-            question3Options[3].style.backgroundColor = 'red';
+            question3Options[0].classList.add('optionButtonWrong');
+            question3Options[1].classList.add('optionButtonWrong');
+            question3Options[2].classList.add('optionButtonCorrect');
+            question3Options[3].classList.add('optionButtonWrong');
         break;
         case 4:
-            question4Options[0].style.backgroundColor = 'red';
-            question4Options[1].style.backgroundColor = 'red';
-            question4Options[2].style.backgroundColor = 'red';
-            question4Options[3].style.backgroundColor = 'red';
+            question4Options[0].classList.add('optionButtonWrong');
+            question4Options[1].classList.add('optionButtonWrong');
+            question4Options[2].classList.add('optionButtonCorrect');
+            question4Options[3].classList.add('optionButtonWrong');
         break;
         case 5:
-            question5Options[0].style.backgroundColor = 'red';
-            question5Options[1].style.backgroundColor = 'red';
-            question5Options[2].style.backgroundColor = 'red';
-            question5Options[3].style.backgroundColor = 'red';
+            question5Options[0].classList.add('optionButtonWrong');
+            question5Options[1].classList.add('optionButtonWrong');
+            question5Options[2].classList.add('optionButtonWrong');
+            question5Options[3].classList.add('optionButtonCorrect');
         break;
         case 6:
-            question6Options[0].style.backgroundColor = 'red';
-            question6Options[1].style.backgroundColor = 'red';
-            question6Options[2].style.backgroundColor = 'red';
-            question6Options[3].style.backgroundColor = 'red';
+            question6Options[0].classList.add('optionButtonCorrect');
+            question6Options[1].classList.add('optionButtonWrong');
+            question6Options[2].classList.add('optionButtonWrong');
+            question6Options[3].classList.add('optionButtonWrong');
         break;
         case 7:
-            question7Options[0].style.backgroundColor = 'red';
-            question7Options[1].style.backgroundColor = 'red';
-            question7Options[2].style.backgroundColor = 'red';
-            question7Options[3].style.backgroundColor = 'red';
+            question7Options[0].classList.add('optionButtonWrong');
+            question7Options[1].classList.add('optionButtonWrong');
+            question7Options[2].classList.add('optionButtonCorrect');
+            question7Options[3].classList.add('optionButtonWrong');
         break;
         case 8:
-            question8Options[0].style.backgroundColor = 'red';
-            question8Options[1].style.backgroundColor = 'red';
-            question8Options[2].style.backgroundColor = 'red';
-            question8Options[3].style.backgroundColor = 'red';
+            question8Options[0].classList.add('optionButtonWrong');
+            question8Options[1].classList.add('optionButtonWrong');
+            question8Options[2].classList.add('optionButtonWrong');
+            question8Options[3].classList.add('optionButtonCorrect');
         break;
         case 9:
-            question9Options[0].style.backgroundColor = 'red';
-            question9Options[1].style.backgroundColor = 'red';
-            question9Options[2].style.backgroundColor = 'red';
-            question9Options[3].style.backgroundColor = 'red';
+            question9Options[0].classList.add('optionButtonWrong');
+            question9Options[1].classList.add('optionButtonWrong');
+            question9Options[2].classList.add('optionButtonCorrect');
+            question9Options[3].classList.add('optionButtonWrong');
         break;
         case 10:
-            question10Options[0].style.backgroundColor = 'red';
-            question10Options[1].style.backgroundColor = 'red';
-            question10Options[2].style.backgroundColor = 'red';
-            question10Options[3].style.backgroundColor = 'red';
+            question10Options[0].classList.add('optionButtonWrong');
+            question10Options[1].classList.add('optionButtonWrong');
+            question10Options[2].classList.add('optionButtonWrong');
+            question10Options[3].classList.add('optionButtonCorrect');
         break;
     }
     
