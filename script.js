@@ -163,10 +163,10 @@ function audioPause(){
 function questionAnswered(correct){  //SFJUOHSDOFUHDSFOIUPHSDFOIUHDSFIUOHDSFOISUDHFDSOIUHFSDIUHFSIUHFISDUHFSDIUFHDSIUFHSDIUHFDSOIUFHDSIUFHDSIUFHDSOIUFHSDOIUHF
     switch (question){
         case 1:
-            question1Options[0].style.backgroundColor = 'red';
-            question1Options[1].style.backgroundColor = 'red';
-            question1Options[2].style.backgroundColor = 'green';
-            question1Options[3].style.backgroundColor = 'red';
+            question1Options[0].classList.add('optionButtonWrong');
+            question1Options[1].classList.add('optionButtonWrong');
+            question1Options[2].classList.add('optionButtonCorrect');
+            question1Options[3].classList.add('optionButtonWrong');
         break;
         case 2:
             question2Options[0].style.backgroundColor = 'red';
