@@ -176,8 +176,8 @@ function questionAnswered(correct){  //SFJUOHSDOFUHDSFOIUPHSDFOIUHDSFIUOHDSFOISU
         break;
         case 3:
             question3Options[0].classList.add('optionButtonWrong');
-            question3Options[1].classList.add('optionButtonWrong');
-            question3Options[2].classList.add('optionButtonCorrect');
+            question3Options[1].classList.add('optionButtonCorrect');
+            question3Options[2].classList.add('optionButtonWrong');
             question3Options[3].classList.add('optionButtonWrong');
         break;
         case 4:
