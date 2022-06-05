@@ -160,12 +160,12 @@ function audioPause(){
     pacManPlay.style.display = 'block';
 }
 
-function questionAnswered(correct){
+function questionAnswered(correct){  //SFJUOHSDOFUHDSFOIUPHSDFOIUHDSFIUOHDSFOISUDHFDSOIUHFSDIUHFSIUHFISDUHFSDIUFHDSIUFHSDIUHFDSOIUFHDSIUFHDSIUFHDSOIUFHSDOIUHF
     switch (question){
         case 1:
             question1Options[0].style.backgroundColor = 'red';
             question1Options[1].style.backgroundColor = 'red';
-            question1Options[2].style.backgroundColor = 'red';
+            question1Options[2].style.backgroundColor = 'green';
             question1Options[3].style.backgroundColor = 'red';
         break;
         case 2:
