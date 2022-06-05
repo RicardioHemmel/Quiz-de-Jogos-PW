@@ -171,3 +171,29 @@ body{
     border-radius: 10px;
     padding: 8px;
 }
+
+.optionButtonCorrect{
+    color: #0060a0;
+    border: 3px solid #0060a0;
+    box-shadow: 
+    0 0 0.1vw 0.4vw #128bdc,
+    0 0 0.4vw 0.6vw #0a71b6,
+    0 0 4vw 0.4vw #02558c,
+    
+    inset 0 0 0.5vw 0.125vw #02558c,
+    inset 0 0 0.1vw 0.075vw #0a71b6,
+    inset 0 0 0.1vw 0.075vw #128bdc;    
+}
+
+.optionButtonWrong{
+    color: #0060a0;
+    border: 3px solid #0060a0;
+    box-shadow: 
+    0 0 0.1vw 0.4vw #128bdc,
+    0 0 0.4vw 0.6vw #0a71b6,
+    0 0 4vw 0.4vw #02558c,
+    
+    inset 0 0 0.5vw 0.125vw #02558c,
+    inset 0 0 0.1vw 0.075vw #0a71b6,
+    inset 0 0 0.1vw 0.075vw #128bdc;    
+}
