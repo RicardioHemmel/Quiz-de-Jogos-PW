@@ -195,15 +195,15 @@ function renderQuestion(){
                 `;
                 break;
                 case 11:
-                 divQuestoes.style.display = 'none';
-                 divQuizFinalizado.style.display = "block";
-                 divQuizFinalizado.innerHTML = `
-                <p>Sua pontuação: ${score}</p>
-                <br>
-                <button onclick="resetAndGoToMainMenu()" class="optionButton questionButton">Menu Principal</button>
-            `
-        ;
-        break;
+                    divQuestoes.style.display = 'none';
+                    divQuizFinalizado.style.display = "block";
+                    divQuizFinalizado.innerHTML = `
+                    <p>Sua pontuação: ${score}</p>
+                    <br>
+                    <button onclick="resetAndGoToMainMenu()" class="optionButton questionButton">Menu Principal</button>
+                    `
+                    ;
+                break;
     }
     console.log(`question: ${question}`);
     console.log(`score: ${score}`);
