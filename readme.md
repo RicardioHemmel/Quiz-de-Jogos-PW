@@ -21,7 +21,7 @@ Coisas a fazer:
     C) Dallas
     D) Gordon Freeman
 
-**3) Em qual desses jogos o protagonista morre em sua continuação?
+**3) Em qual desses jogos o protagonista morre em sua continuação?**
 
     A) Portal 2
     B) Payday 2
@@ -60,3 +60,7 @@ Coisas a fazer:
 
 -  Animação no pacman
 -  Fundo que mexe
+
+## IMPORTANTE´(CORRIGIR):
+
+-   Se o usuário voltar ao menu principal e clicar em instruções, o jogo recomeça.
