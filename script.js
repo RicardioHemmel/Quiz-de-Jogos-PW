@@ -10,14 +10,14 @@ var divInstrucoes = document.getElementById('divInstrucoes')
 
 var question1Options = document.getElementById('question1Options').querySelectorAll('.questionButton');
 var question2Options = document.getElementById('question2Options').querySelectorAll('.questionButton');
-// var question3Options = document.getElementById('question3Options').querySelectorAll('.questionButton');
-// var question4Options = document.getElementById('question4Options').querySelectorAll('.questionButton');
-// var question5Options = document.getElementById('question5Options').querySelectorAll('.questionButton');
-// var question6Options = document.getElementById('question6Options').querySelectorAll('.questionButton');
-// var question7Options = document.getElementById('question7Options').querySelectorAll('.questionButton');
-// var question8Options = document.getElementById('question8Options').querySelectorAll('.questionButton');
-// var question9Options = document.getElementById('question9Options').querySelectorAll('.questionButton');
-// var question10Options = document.getElementById('question10Options').querySelectorAll('.questionButton');
+var question3Options = document.getElementById('question3Options').querySelectorAll('.questionButton');
+var question4Options = document.getElementById('question4Options').querySelectorAll('.questionButton');
+var question5Options = document.getElementById('question5Options').querySelectorAll('.questionButton');
+var question6Options = document.getElementById('question6Options').querySelectorAll('.questionButton');
+var question7Options = document.getElementById('question7Options').querySelectorAll('.questionButton');
+var question8Options = document.getElementById('question8Options').querySelectorAll('.questionButton');
+var question9Options = document.getElementById('question9Options').querySelectorAll('.questionButton');
+var question10Options = document.getElementById('question10Options').querySelectorAll('.questionButton');
 
 // var alterarBulba = document.getElementById('blackBulba')
 // alterarBulba.setAttribute('src', 'bulbasaur-pokemon.gif')
@@ -163,7 +163,7 @@ function audioPause(){
 function questionAnswered(correct){
     switch (question){
         case 1:
-            question1Options[0].style.backgroundColor = 'green';
+            question1Options[0].style.backgroundColor = 'red';
             question1Options[1].style.backgroundColor = 'red';
             question1Options[2].style.backgroundColor = 'red';
             question1Options[3].style.backgroundColor = 'red';
@@ -172,7 +172,55 @@ function questionAnswered(correct){
             question2Options[0].style.backgroundColor = 'red';
             question2Options[1].style.backgroundColor = 'red';
             question2Options[2].style.backgroundColor = 'red';
-            question2Options[3].style.backgroundColor = 'green';
+            question2Options[3].style.backgroundColor = 'red';
+        break;
+        case 3:
+            question3Options[0].style.backgroundColor = 'red';
+            question3Options[1].style.backgroundColor = 'red';
+            question3Options[2].style.backgroundColor = 'red';
+            question3Options[3].style.backgroundColor = 'red';
+        break;
+        case 4:
+            question4Options[0].style.backgroundColor = 'red';
+            question4Options[1].style.backgroundColor = 'red';
+            question4Options[2].style.backgroundColor = 'red';
+            question4Options[3].style.backgroundColor = 'red';
+        break;
+        case 5:
+            question5Options[0].style.backgroundColor = 'red';
+            question5Options[1].style.backgroundColor = 'red';
+            question5Options[2].style.backgroundColor = 'red';
+            question5Options[3].style.backgroundColor = 'red';
+        break;
+        case 6:
+            question6Options[0].style.backgroundColor = 'red';
+            question6Options[1].style.backgroundColor = 'red';
+            question6Options[2].style.backgroundColor = 'red';
+            question6Options[3].style.backgroundColor = 'red';
+        break;
+        case 7:
+            question7Options[0].style.backgroundColor = 'red';
+            question7Options[1].style.backgroundColor = 'red';
+            question7Options[2].style.backgroundColor = 'red';
+            question7Options[3].style.backgroundColor = 'red';
+        break;
+        case 8:
+            question8Options[0].style.backgroundColor = 'red';
+            question8Options[1].style.backgroundColor = 'red';
+            question8Options[2].style.backgroundColor = 'red';
+            question8Options[3].style.backgroundColor = 'red';
+        break;
+        case 9:
+            question9Options[0].style.backgroundColor = 'red';
+            question9Options[1].style.backgroundColor = 'red';
+            question9Options[2].style.backgroundColor = 'red';
+            question9Options[3].style.backgroundColor = 'red';
+        break;
+        case 10:
+            question10Options[0].style.backgroundColor = 'red';
+            question10Options[1].style.backgroundColor = 'red';
+            question10Options[2].style.backgroundColor = 'red';
+            question10Options[3].style.backgroundColor = 'red';
         break;
     }
     
