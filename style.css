@@ -171,3 +171,77 @@ body{
     border-radius: 10px;
     padding: 8px;
 }
+
+.optionButtonCorrect{
+    display: disabled;
+
+    color: #00a01b;
+    border: 3px solid #00a023;
+    box-shadow: 
+    0 0 0.1vw 0.4vw #12dc23,
+    0 0 0.4vw 0.6vw #0ab621,
+    0 0 4vw 0.4vw #028c14,
+    
+    inset 0 0 0.5vw 0.125vw #028c19,
+    inset 0 0 0.1vw 0.075vw #18b60a,
+    inset 0 0 0.1vw 0.075vw #23dc12;    
+}
+
+.optionButtonCorrect:hover{
+    display: disabled;
+
+    color: #00a01b;
+    border: 3px solid #00a023;
+    box-shadow: 
+    0 0 0.1vw 0.4vw #12dc23,
+    0 0 0.4vw 0.6vw #0ab621,
+    0 0 4vw 0.4vw #028c14,
+    
+    inset 0 0 0.5vw 0.125vw #028c19,
+    inset 0 0 0.1vw 0.075vw #18b60a,
+    inset 0 0 0.1vw 0.075vw #23dc12;    
+}
+
+.optionButtonWrong{
+    color: #a00000;
+    border: 3px solid #a00000;
+    box-shadow: 
+    0 0 0.1vw 0.4vw #dc1212,
+    0 0 0.4vw 0.6vw #b60a0a,
+    0 0 4vw 0.4vw #8c0202,
+    
+    inset 0 0 0.5vw 0.125vw #8c0202,
+    inset 0 0 0.1vw 0.075vw #b60a0a,
+    inset 0 0 0.1vw 0.075vw #dc1212;    
+}
+
+.optionButtonWrong:hover{
+    color: #a00000;
+    border: 3px solid #a00000;
+    box-shadow: 
+    0 0 0.1vw 0.4vw #dc1212,
+    0 0 0.4vw 0.6vw #b60a0a,
+    0 0 4vw 0.4vw #8c0202,
+    
+    inset 0 0 0.5vw 0.125vw #8c0202,
+    inset 0 0 0.1vw 0.075vw #b60a0a,
+    inset 0 0 0.1vw 0.075vw #dc1212;    
+}
+
+ol {
+    text-align: left;
+}
+
+li {
+    margin-bottom: 25px;
+    font-size: 14pt;
+}
+
+ul{
+    text-align: center;
+    list-style-type: none;
+}
+
+a {
+    color: white;
+}
