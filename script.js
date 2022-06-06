@@ -3,11 +3,13 @@ var menuPrincipal = document.getElementById('menuPrincipal');
 var divQuestoes = document.getElementById('divQuestoes');
 var divQuizFinalizado = document.getElementById('divQuizFinalizado');
 var startButton = document.getElementById('startButton');
-var helpButton = document.getElementById('helpButton')
-var creditsButton = document.getElementById('creditsButton')
-var pacManPause = document.getElementById('pacManPause')
-var pacManPlay = document.getElementById('pacManPlay')
-var divInstrucoes = document.getElementById('divInstrucoes')
+var helpButton = document.getElementById('helpButton');
+var creditsButton = document.getElementById('creditsButton');
+var pacManPause = document.getElementById('pacManPause');
+var pacManPlay = document.getElementById('pacManPlay');
+var divInstrucoes = document.getElementById('divInstrucoes');
+var bulbasaurBlack = document.getElementById('bulbasaurBlack');
+var scorpionMk = document.getElementById('scorpionMk');
 
 var question1Options = document.getElementById('question1Options').querySelectorAll('.questionButton');
 var question2Options = document.getElementById('question2Options').querySelectorAll('.questionButton');
@@ -171,9 +173,16 @@ function audioPause(){
     pacManPlay.style.display = 'block';
 }
 
-function questionAnswered(correct){  //SFJUOHSDOFUHDSFOIUPHSDFOIUHDSFIUOHDSFOISUDHFDSOIUHFSDIUHFSIUHFISDUHFSDIUFHDSIUFHSDIUHFDSOIUFHDSIUFHDSIUFHDSOIUFHSDOIUHF
+function questionAnswered(correct){
+
+    const toastyMk = new Audio('./public/audio/toastySound.mp3');
+    toastyMk.volume = 0.2;
+
     switch (question){
         case 1:
+
+            bulbasaurBlack.src = './public/img/bulbasaurPokemon.gif';
+
             question1Options[0].classList.add('optionButtonWrong');
             question1Options[0].disabled = true
             question1Options[1].classList.add('optionButtonWrong');
@@ -184,6 +193,10 @@ function questionAnswered(correct){  //SFJUOHSDOFUHDSFOIUPHSDFOIUHDSFIUOHDSFOISU
             question1Options[3].disabled = true
         break;
         case 2:
+
+            scorpionMk.src = './public/img/toastyMk.gif';
+            toastyMk.play();
+
             question2Options[0].classList.add('optionButtonWrong');
             question2Options[0].disabled = true
             question2Options[1].classList.add('optionButtonWrong');
@@ -280,7 +293,7 @@ function questionAnswered(correct){  //SFJUOHSDOFUHDSFOIUPHSDFOIUHDSFIUOHDSFOISU
     if(correct){
         score++;
     }
-    setTimeout(renderQuestion, 1.2*1000);
+    setTimeout(renderQuestion, 1.75*1000);
 }
 
 // função pra resetar os pontos e ir pro menu
