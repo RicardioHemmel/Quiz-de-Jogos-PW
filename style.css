@@ -261,14 +261,18 @@ a {
     color: white;
 }
 
-.miranha {
+.miranha{
     width: 500px;
 }
 
-.farcry {
+.farcry{
     width: 550px;
 }
 
-.speed {
+.speed{
     width: 470px;
+}
+
+.ryu{
+    height: 250px;
 }
