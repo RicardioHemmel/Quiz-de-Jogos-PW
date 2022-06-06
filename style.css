@@ -227,3 +227,12 @@ body{
     inset 0 0 0.1vw 0.075vw #b60a0a,
     inset 0 0 0.1vw 0.075vw #dc1212;    
 }
+
+ol {
+    text-align: left;
+}
+
+li {
+    margin-bottom: 25px;
+    font-size: 14pt;
+}
