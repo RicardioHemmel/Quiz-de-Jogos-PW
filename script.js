@@ -175,63 +175,103 @@ function questionAnswered(correct){  //SFJUOHSDOFUHDSFOIUPHSDFOIUHDSFIUOHDSFOISU
     switch (question){
         case 1:
             question1Options[0].classList.add('optionButtonWrong');
+            question1Options[0].disabled = true
             question1Options[1].classList.add('optionButtonWrong');
+            question1Options[1].disabled = true
             question1Options[2].classList.add('optionButtonCorrect');
+            question1Options[2].disabled = true
             question1Options[3].classList.add('optionButtonWrong');
+            question1Options[3].disabled = true
         break;
         case 2:
             question2Options[0].classList.add('optionButtonWrong');
+            question2Options[0].disabled = true
             question2Options[1].classList.add('optionButtonWrong');
+            question2Options[1].disabled = true
             question2Options[2].classList.add('optionButtonWrong');
+            question2Options[2].disabled = true
             question2Options[3].classList.add('optionButtonCorrect');
+            question2Options[3].disabled = true
         break;
         case 3:
             question3Options[0].classList.add('optionButtonWrong');
+            question3Options[0].disabled = true
             question3Options[1].classList.add('optionButtonCorrect');
+            question3Options[1].disabled = true
             question3Options[2].classList.add('optionButtonWrong');
+            question3Options[2].disabled = true
             question3Options[3].classList.add('optionButtonWrong');
+            question3Options[3].disabled = true
         break;
         case 4:
             question4Options[0].classList.add('optionButtonWrong');
+            question4Options[0].disabled = true
             question4Options[1].classList.add('optionButtonWrong');
+            question4Options[1].disabled = true
             question4Options[2].classList.add('optionButtonCorrect');
+            question4Options[2].disabled = true
             question4Options[3].classList.add('optionButtonWrong');
+            question4Options[3].disabled = true
         break;
         case 5:
             question5Options[0].classList.add('optionButtonWrong');
+            question5Options[0].disabled = true
             question5Options[1].classList.add('optionButtonWrong');
+            question5Options[1].disabled = true
             question5Options[2].classList.add('optionButtonWrong');
+            question5Options[2].disabled = true
             question5Options[3].classList.add('optionButtonCorrect');
+            question5Options[3].disabled = true
         break;
         case 6:
             question6Options[0].classList.add('optionButtonCorrect');
+            question6Options[0].disabled = true
             question6Options[1].classList.add('optionButtonWrong');
+            question6Options[1].disabled = true
             question6Options[2].classList.add('optionButtonWrong');
+            question6Options[2].disabled = true
             question6Options[3].classList.add('optionButtonWrong');
+            question6Options[3].disabled = true
         break;
         case 7:
             question7Options[0].classList.add('optionButtonWrong');
+            question7Options[0].disabled = true
             question7Options[1].classList.add('optionButtonWrong');
+            question7Options[1].disabled = true
             question7Options[2].classList.add('optionButtonCorrect');
+            question7Options[2].disabled = true
             question7Options[3].classList.add('optionButtonWrong');
+            question7Options[3].disabled = true
         break;
         case 8:
             question8Options[0].classList.add('optionButtonWrong');
+            question8Options[0].disabled = true
             question8Options[1].classList.add('optionButtonWrong');
+            question8Options[1].disabled = true
             question8Options[2].classList.add('optionButtonWrong');
+            question8Options[2].disabled = true
             question8Options[3].classList.add('optionButtonCorrect');
+            question8Options[3].disabled = true
         break;
         case 9:
             question9Options[0].classList.add('optionButtonWrong');
+            question9Options[0].disabled = true
             question9Options[1].classList.add('optionButtonWrong');
+            question9Options[1].disabled = true
             question9Options[2].classList.add('optionButtonCorrect');
+            question9Options[2].disabled = true
             question9Options[3].classList.add('optionButtonWrong');
+            question9Options[3].disabled = true
         break;
         case 10:
             question10Options[0].classList.add('optionButtonWrong');
+            question10Options[0].disabled = true
             question10Options[1].classList.add('optionButtonWrong');
+            question10Options[1].disabled = true
             question10Options[2].classList.add('optionButtonWrong');
+            question10Options[2].disabled = true
             question10Options[3].classList.add('optionButtonCorrect');
+            question10Options[3].disabled = true
         break;
     }
     
