@@ -175,7 +175,32 @@
                     </div>
                     <div id="divInstrucoes" style="display: none">
                         <h1>Instruções</h1>
+                        <ol>
+                            <li>Para começar clique em "Começar Quiz".</li>
+                            <li>Para cada resposta correta será contabilizado 1 ponto.</li>
+                            <li>Ao selecionar uma alternativa, aparecerá qual é a 
+                                certa (Verde) e qual é a errada (Vermelha).</li>
+                            <li>Após selecionar uma resposta, você será redirecionado
+                                 para a próxima pergunta depois de alguns segundos.</li>
+                            <li>Após o fim do Quiz, clique em "Menu Principal" para voltar a página principal.</li>
+                            <li>Há um Easter-egg no Quiz (É fácil de achar 😉).</li>
+                        </ol>
                         <button onclick="resetAndGoToMainMenu()" class="optionButton questionButton">Menu Principal</button>
+                    </div>
+                    <div id= "divCreditos" style="display: none">
+                        <h1>Integrantes do Grupo:</h1>
+                            <ul>
+                                <li ahref="https://github.com/RicardioHemmel" target="_blank">Ricardo Hemmel</li>
+                                <li ahref="https://github.com/TheoBortoletto" target="_blank">Théo Henrique Ghetti Bortoletto</li>
+                                <li ahref="https://github.com/thiagopls1" target="_blank">Thiago Pereira Lins da Silva</li>
+                            </ul>
+                        <h1>Instituição:</h1>
+                            <p class="infoUni">Centro Universitário Senac - Campus Santo Amaro</p>
+                        <h1>Professores:</h1> 
+                            <ul>
+                                <li>Fábio Abenza</li>
+                                <li>Mário Toledo</li>
+                            </ul>
                     </div>
                 </div>
             </div>
@@ -185,6 +210,9 @@
                 </button>
                 <button id="helpButton" class="optionButton" onClick="increaseMainBox(renderInstructions)">
                     Instruções
+                </button>
+                <button id="creditsButton" class="optionButton" onClick="increaseMainBox(renderCredits)">
+                    Créditos
                 </button>
             </div>
         </div>

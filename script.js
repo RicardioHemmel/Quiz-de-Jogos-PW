@@ -240,7 +240,7 @@ function questionAnswered(correct){  //SFJUOHSDOFUHDSFOIUPHSDFOIUHDSFIUOHDSFOISU
     if(correct){
         score++;
     }
-    setTimeout(renderQuestion, 2.0*1000);
+    setTimeout(renderQuestion, 1.2*1000);
 }
 
 // função pra resetar os pontos e ir pro menu
