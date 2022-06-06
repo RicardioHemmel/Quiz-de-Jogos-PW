@@ -26,12 +26,152 @@
                         <h2>Teste seu conhecimento sobre jogos</h2> <!-- Se quiserem mudar, eu mudo 🙂 -->
                     </div>
                     <div id="divQuestoes" style="display: none">
-                        <h1></h1>
+                        <div id="question1" style="display: none">
+                            <div class="headingContainer">
+                                <h1>1 - Quem é esse Pokemón?</h1>                                                          
+                                </div>
+                                <div class="imageContainer">
+                                    <img class="blackBulba" src="./public/img/bulbassauroCensured.gif">
+                                </div>
+                                <div id="question1Options" class="buttonsContainer">
+                                    <button onClick="questionAnswered(false)" class="optionButton questionButton">Pikachu</button>
+                                    <button onClick="questionAnswered(false)" class="optionButton questionButton">Snorlax</button>
+                                    <button onClick="questionAnswered(true)" class="optionButton questionButton">Bulbasauro</button>
+                                    <button onClick="questionAnswered(false)" class="optionButton questionButton">Magikarp</button>
+                            </div>
+                        </div>
+                        <div id="question2" style="display: none">
+                            <div class="headingContainer">
+                                <h1>2 - Qual golpe do Mortal Kombat após ser desferido era responsável por fazer 
+                                        o criador do jogo aparecer como um Easter Egg?</h1>
+                                </div>
+                                <div class="imageContainer">
+                                    <img class="blackBulba" src="./public/img/bulbassauroCensured.gif">
+                                </div>
+                                <div id="question2Options" class="buttonsContainer">
+                                    <button onClick="questionAnswered(false)" class="optionButton questionButton">Agarrão</button>
+                                    <button onClick="questionAnswered(false)" class="optionButton questionButton">Rasteira</button>
+                                    <button onClick="questionAnswered(false)" class="optionButton questionButton">Soco baixo</button>
+                                    <button onClick="questionAnswered(true)" class="optionButton questionButton">Gancho</button>
+                            </div>
+                        </div>
+                        <div id="question3" style="display: none">
+                            <div class="headingContainer">
+                                <h1>3 - Em qual jogo o Mario aparece pela primeira vez?</h1>
+                                </div>
+                                <div class="imageContainer">
+                                    <img class="blackBulba" src="./public/img/bulbassauroCensured.gif">
+                                </div>
+                                <div id="question3Options" class="buttonsContainer">
+                                    <button onClick="questionAnswered(false)" class="optionButton questionButton">Sonic</button>
+                                    <button onClick="questionAnswered(true)" class="optionButton questionButton">Donkey Kong</button>
+                                    <button onClick="questionAnswered(false)" class="optionButton questionButton">Pac-Man</button>
+                                    <button onClick="questionAnswered(false)" class="optionButton questionButton">Super Mario Bros</button>
+                            </div>
+                        </div>
+                        <div id="question4" style="display: none">
+                            <div class="headingContainer">
+                                <h1>4 - Dentre estes personagens, qual o mais conhecido na franquia Call of Duty?</h1>
+                                </div>
+                                <div class="imageContainer">
+                                    <img class="blackBulba" src="./public/img/bulbassauroCensured.gif">
+                                </div>
+                                <div id="question4Options" class="buttonsContainer">
+                                    <button onClick="questionAnswered(false)" class="optionButton questionButton">Alex Mason</button>
+                                    <button onClick="questionAnswered(false)" class="optionButton questionButton">Viktpr Reznov</button>
+                                    <button onClick="questionAnswered(true)" class="optionButton questionButton">Simon 'Ghost' Riley</button>
+                                    <button onClick="questionAnswered(false)" class="optionButton questionButton">Soap Mactavish</button>
+                            </div>
+                        </div>
+                        <div id="question5" style="display: none">
+                            <div class="headingContainer">
+                                <h1>5 - O personagem Ryu é pertencente a qual jogo do genêro "luta"?</h1>
+                                </div>
+                                <div class="imageContainer">
+                                    <img class="blackBulba" src="./public/img/bulbassauroCensured.gif">
+                                </div>
+                                <div id="question5Options" class="buttonsContainer">
+                                    <button onClick="questionAnswered(false)" class="optionButton questionButton">The King of Fighters</button>
+                                    <button onClick="questionAnswered(false)" class="optionButton questionButton">Brawlhalla</button>
+                                    <button onClick="questionAnswered(false)" class="optionButton questionButton">Tekken 7</button>
+                                    <button onClick="questionAnswered(true)" class="optionButton questionButton">Street Fighter</button>
+                            </div>
+                        </div>
+                        <div id="question6" style="display: none">
+                            <div class="headingContainer">
+                                <h1>6 - Onde se passa o principais eventos do GTA San Andreas?</h1>
+                                </div>
+                                <div class="imageContainer">
+                                    <img class="blackBulba" src="./public/img/bulbassauroCensured.gif">
+                                </div>
+                                <div id="question6Options" class="buttonsContainer">
+                                    <button onClick="questionAnswered(true)" class="optionButton questionButton">Los Santos</button>
+                                    <button onClick="questionAnswered(false)" class="optionButton questionButton">Vice City</button>
+                                    <button onClick="questionAnswered(false)" class="optionButton questionButton">Rockport</button>
+                                    <button onClick="questionAnswered(false)" class="optionButton questionButton">San Fierro</button>
+                            </div>
+                        </div>
+                        <div id="question7" style="display: none">
+                            <div class="headingContainer">
+                                <h1>7 - Em Spider Man PS4, quem é o chefe de Peter Parker?</h1>
+                                </div>
+                                <div class="imageContainer">
+                                    <img class="blackBulba" src="./public/img/bulbassauroCensured.gif">
+                                </div>
+                                <div id="question7Options" class="buttonsContainer">
+                                    <button onClick="questionAnswered(false)" class="optionButton questionButton">John Jonah Jameson (JJJ)</button>
+                                    <button onClick="questionAnswered(false)" class="optionButton questionButton">Adilson Konrad</button>
+                                    <button onClick="questionAnswered(true)" class="optionButton questionButton">Dr. Otto Octavius</button>
+                                    <button onClick="questionAnswered(false)" class="optionButton questionButton">Norman Osborn</button>
+                            </div>
+                        </div>
+                        <div id="question8" style="display: none">
+                            <div class="headingContainer">
+                                <h1>8 - Quem é esse personagem?</h1>
+                                </div>
+                                <div class="imageContainer">
+                                    <img class="blackBulba" src="./public/img/bulbassauroCensured.gif">
+                                </div>
+                                <div id="question8Options" class="buttonsContainer">
+                                    <button onClick="questionAnswered(false)" class="optionButton questionButton">Gl4dos</button>
+                                    <button onClick="questionAnswered(false)" class="optionButton questionButton">Snorlax</button>
+                                    <button onClick="questionAnswered(false)" class="optionButton questionButton">Zer0</button>
+                                    <button onClick="questionAnswered(true)" class="optionButton questionButton">Claptrap</button>
+                            </div>
+                        </div>
+                        <div id="question9" style="display: none">
+                            <div class="headingContainer">
+                                <h1>9 - Quem é o vilão de FarCry 3?</h1>
+                                </div>
+                                <div class="imageContainer">
+                                    <img class="blackBulba" src="./public/img/bulbassauroCensured.gif">
+                                </div>
+                                <div id="question9Options" class="buttonsContainer">
+                                    <button onClick="questionAnswered(false)" class="optionButton questionButton">Joseph Seed (O Pai)</button>
+                                    <button onClick="questionAnswered(false)" class="optionButton questionButton">Pagan Min</button>
+                                    <button onClick="questionAnswered(true)" class="optionButton questionButton">Vaas Montenegro</button>
+                                    <button onClick="questionAnswered(false)" class="optionButton questionButton">Antón Castillo</button>
+                            </div>
+                        </div>
+                        <div id="question10" style="display: none">
+                            <div class="headingContainer">
+                                <h1>10 - Qual desses jogos de corrida foi feito em 2005?</h1>
+                                </div>
+                                <div class="imageContainer">
+                                    <img class="blackBulba" src="./public/img/bulbassauroCensured.gif">
+                                </div>
+                                <div id="question10Options" class="buttonsContainer">
+                                    <button onClick="questionAnswered(false)" class="optionButton questionButton">Forza Horizon 2</button>
+                                    <button onClick="questionAnswered(false)" class="optionButton questionButton">Need for Speed: Carbon</button>
+                                    <button onClick="questionAnswered(false)" class="optionButton questionButton">DiRT 3</button>
+                                    <button onClick="questionAnswered(true)" class="optionButton questionButton">Need for Speed: Most Wanted</button>
+                            </div>
+                        </div>
                     </div>
                     <div id="divQuizFinalizado" style="display: none">
                         <p>Sua pontuação: ${score}</p>
                         <br>
-                        <button onclick="resetAndGoToMainMenu()" class="optionButton questionButton">Menu Principal</button>
+                        <button onclick="reloadPage()" class="optionButton questionButton">Menu Principal</button>
                     </div>
                     <div id="divInstrucoes" style="display: none">
                         <h1>Instruções</h1>

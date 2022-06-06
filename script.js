@@ -4,11 +4,35 @@ var divQuestoes = document.getElementById('divQuestoes');
 var divQuizFinalizado = document.getElementById('divQuizFinalizado');
 var startButton = document.getElementById('startButton');
 var helpButton = document.getElementById('helpButton')
+var creditsButton = document.getElementById('creditsButton')
 var pacManPause = document.getElementById('pacManPause')
 var pacManPlay = document.getElementById('pacManPlay')
 var divInstrucoes = document.getElementById('divInstrucoes')
+
+var question1Options = document.getElementById('question1Options').querySelectorAll('.questionButton');
+var question2Options = document.getElementById('question2Options').querySelectorAll('.questionButton');
+var question3Options = document.getElementById('question3Options').querySelectorAll('.questionButton');
+var question4Options = document.getElementById('question4Options').querySelectorAll('.questionButton');
+var question5Options = document.getElementById('question5Options').querySelectorAll('.questionButton');
+var question6Options = document.getElementById('question6Options').querySelectorAll('.questionButton');
+var question7Options = document.getElementById('question7Options').querySelectorAll('.questionButton');
+var question8Options = document.getElementById('question8Options').querySelectorAll('.questionButton');
+var question9Options = document.getElementById('question9Options').querySelectorAll('.questionButton');
+var question10Options = document.getElementById('question10Options').querySelectorAll('.questionButton');
+
 // var alterarBulba = document.getElementById('blackBulba')
 // alterarBulba.setAttribute('src', 'bulbasaur-pokemon.gif')
+
+var question1 = document.getElementById('question1');
+var question2 = document.getElementById('question2');
+var question3 = document.getElementById('question3');
+var question4 = document.getElementById('question4');
+var question5 = document.getElementById('question5');
+var question6 = document.getElementById('question6');
+var question7 = document.getElementById('question7');
+var question8 = document.getElementById('question8');
+var question9 = document.getElementById('question9');
+var question10 = document.getElementById('question10');
 
 var question = 1;
 var score = 0;
@@ -19,193 +43,69 @@ function renderQuestion(){
 
     menuPrincipal.style.display = 'none';
     divInstrucoes.style.display = 'none';
+    divCreditos.style.display = 'none';
     divQuestoes.style.display = 'block';
-
-        divQuestoes.innerHTML = `
-        <div class="headingContainer">
-        <h1>1 - Quem é esse pokemón?</h1>
-        </div>
-        <div class="imageContainer">
-            <img class="blackBulba" src="./public/img/bulbassauroCensured.gif">
-        </div>
-        <div class="buttonsContainer">
-            <button onClick="questionAnswered(true)" class="optionButton questionButton">Pikachu</button>
-            <button onClick="questionAnswered(false)" class="optionButton questionButton">Snorlax</button>
-            <button onClick="questionAnswered(false)" class="optionButton questionButton">Bulbasauro</button>
-            <button onClick="questionAnswered(false)" class="optionButton questionButton">Magikarp</button>
-        </div>
-        `;
 
     switch (question){
         case 1:
-    divQuestoes.innerHTML = `
-        <div class="headingContainer">
-        <h1>${question} - Quem é esse Pokemón?</h1>
-        </div>
-        <div class="imageContainer">
-            <img class="blackBulba" src="./public/img/bulbassauroCensured.gif">
-        </div>
-        <div class="buttonsContainer">
-            <button onClick="questionAnswered(true)" class="optionButton questionButton">Pikachu</button>
-            <button onClick="questionAnswered(false)" class="optionButton questionButton">Snorlax</button>
-            <button onClick="questionAnswered(false)" class="optionButton questionButton">Bulbasauro</button>
-            <button onClick="questionAnswered(false)" class="optionButton questionButton">Magikarp</button>
-        </div>
-        `;
+            // Q1
+            question1.style.display = 'block';
         break;
         case 2:
-        divQuestoes.innerHTML = `
-        <div class="headingContainer">
-            <h1>${question} - Quantos fantasmas tem no jogo Pac-Man?</h1>
-        </div>
-        <div class="imageContainer">
-            <img src="./public/img/ghostQuestion.gif">
-        </div>
-        <div class="buttonsContainer">
-            <button onClick="questionAnswered(false)" class="optionButton questionButton">3 Fantasmas</button>
-            <button onClick="questionAnswered(false)" class="optionButton questionButton">5 Fantasmas</button>
-            <button onClick="questionAnswered(false)" class="optionButton questionButton">2 Fantasmas</button>
-            <button onClick="questionAnswered(true)" class="optionButton questionButton">4 Fantasmas</button>
-        </div>
-        `;
+            // Q2
+            question1.style.display = 'none';
+            question2.style.display = 'block';
         break;
         case 3:
-        divQuestoes.innerHTML = `
-        <div class="headingContainer">
-            <h1>${question} - Qual é a empresa responsável pela criação do Minecraft?</h1>
-        </div>
-        <div class="imageContainer">
-            <img src="./public/img/minecraft.gif">
-        </div>
-        <div class="buttonsContainer">
-            <button onClick="questionAnswered(false)" class="optionButton questionButton">Activision</button>
-            <button onClick="questionAnswered(true)" class="optionButton questionButton">Mojang Studios</button>
-            <button onClick="questionAnswered(false)" class="optionButton questionButton">Epic Games</button>
-            <button onClick="questionAnswered(false)" class="optionButton questionButton">Supercell</button>
-        </div>
-        `;
+            // Q3
+            question2.style.display = 'none';
+            question3.style.display = 'block';
         break;
         case 4:
-        divQuestoes.innerHTML = `
-        <div class="headingContainer">
-            <h1>${question} - Dentre estes jogos qual é o mais caro, incluído com as DLCs?</h1>
-        </div>
-        <div class="imageContainer">
-            <img src="./public/img/minecraft.gif">
-        </div>
-        <div class="buttonsContainer">
-            <button onClick="questionAnswered(false)" class="optionButton questionButton">Half-Life: Alyx</button>
-            <button onClick="questionAnswered(false)" class="optionButton questionButton">The Sims 4</button>
-            <button onClick="questionAnswered(false)" class="optionButton questionButton">The Last of Us Part II</button>
-            <button onClick="questionAnswered(true)" class="optionButton questionButton">Train Simulator</button>
-        </div>
-        `;
+            // Q4
+            question3.style.display = 'none';
+            question4.style.display = 'block';
         break;
         case 5:
-            divQuestoes.innerHTML = `
-        <div class="headingContainer">
-            <h1>${question} - Quem é este personagem?</h1>
-        </div>
-        <div class="imageContainer">
-            <img src="./public/img/minecraft.gif">
-        </div>
-        <div class="buttonsContainer">
-            <button onClick="questionAnswered(false)" class="optionButton questionButton">Raiden</button>
-            <button onClick="questionAnswered(false)" class="optionButton questionButton">Jacket</button>
-            <button onClick="questionAnswered(false)" class="optionButton questionButton">Dallas</button>
-            <button onClick="questionAnswered(true)" class="optionButton questionButton">Gordon Freeman</button>
-        </div>
-        `;
+            // Q5
+            question4.style.display = 'none';
+            question5.style.display = 'block';
         break;
         case 6:
-            divQuestoes.innerHTML = `
-        <div class="headingContainer">
-            <h1>${question} - Em qual desses jogos o protagonista morre em sua continuação?</h1>
-        </div>
-        <div class="imageContainer">
-            <img src="./public/img/minecraft.gif">
-        </div>
-        <div class="buttonsContainer">
-            <button onClick="questionAnswered(false)" class="optionButton questionButton">Portal 2</button>
-            <button onClick="questionAnswered(false)" class="optionButton questionButton">PayDay 2</button>
-            <button onClick="questionAnswered(true)" class="optionButton questionButton">The Last of Us Part II</button>
-            <button onClick="questionAnswered(false)" class="optionButton questionButton">Half-Life 2</button>
-        </div>
-        `;
+            // Q6
+            question5.style.display = 'none';
+            question6.style.display = 'block';
         break;
         case 7:
-            divQuestoes.innerHTML = `
-        <div class="headingContainer">
-            <h1>${question} - Qual desses jogos possui a menor nota de review?</h1>
-        </div>
-        <div class="imageContainer">
-            <img src="./public/img/minecraft.gif">
-        </div>
-        <div class="buttonsContainer">
-            <button onClick="questionAnswered(false)" class="optionButton questionButton">Fall Guys</button>
-            <button onClick="questionAnswered(false)" class="optionButton questionButton">Fallout 75</button>
-            <button onClick="questionAnswered(false)" class="optionButton questionButton">Metal Gear Survive</button>
-            <button onClick="questionAnswered(true)" class="optionButton questionButton">Grand Theft Auto: The Trilogy - The Definitive Edition</button>
-        </div>
-        `;
+            // Q7
+            question6.style.display = 'none';
+            question7.style.display = 'block';
         break;
         case 8:
-        divQuestoes.innerHTML = `
-        <div class="headingContainer">
-            <h1>${question} - Em qual desses jogos Hack 'n Slash você consegue fazer combos com seus golpes pontuando do E ao S?</h1>
-        </div>
-        <div class="imageContainer">
-            <img src="./public/img/minecraft.gif">
-        </div>
-        <div class="buttonsContainer">
-            <button onClick="questionAnswered(false)" class="optionButton questionButton">Metal Gear Rising: Revengeance</button>
-            <button onClick="questionAnswered(true)" class="optionButton questionButton">Devil May Cry</button>
-            <button onClick="questionAnswered(false)" class="optionButton questionButton">Sekiro: Shadows Die Twice</button>
-            <button onClick="questionAnswered(false)" class="optionButton questionButton">Katana Zero</button>
-        </div>
-        `;
+            // Q8
+            question7.style.display = 'none';
+            question8.style.display = 'block';
         break;
         case 9:
-            divQuestoes.innerHTML = `
-        <div class="headingContainer">
-            <h1>${question} - Depth é um jogo em que o jogador:</h1>
-        </div>
-        <div class="imageContainer">
-            <img src="./public/img/minecraft.gif">
-        </div>
-        <div class="buttonsContainer">
-            <button onClick="questionAnswered(false)" class="optionButton questionButton">Precisa descer em crateras para explorar.</button>
-            <button onClick="questionAnswered(true)" class="optionButton questionButton">Joga contra tubarões e com outros jogadores enquanto resgata ouro.</button>
-            <button onClick="questionAnswered(false)" class="optionButton questionButton">Cria uma base, explora o mundo e enfrenta uma diversidade de inimigos.</button>
-            <button onClick="questionAnswered(false)" class="optionButton questionButton">Tem que chegar o mais longe possível em uma masmorra.</button>
-        </div>
-        `;
+            // Q9
+            question8.style.display = 'none';
+            question9.style.display = 'block';
         break;
         case 10:
-            divQuestoes.innerHTML = `
-        <div class="headingContainer">
-            <h1>${question} - Quem é o antagonista principal de Metal Gear Solid V: The Phantom Pain?</h1>
-        </div>
-        <div class="imageContainer">
-            <img src="./public/img/minecraft.gif">
-        </div>
-        <div class="buttonsContainer">
-            <button onClick="questionAnswered(false)" class="optionButton questionButton">Greyfox</button>
-            <button onClick="questionAnswered(true)" class="optionButton questionButton">Snake</button>
-            <button onClick="questionAnswered(false)" class="optionButton questionButton">Kazuhira Müller</button>
-            <button onClick="questionAnswered(false)" class="optionButton questionButton">Skull Face</button>
-        </div>
-        `;
+            // Q10
+            question9.style.display = 'none';
+            question10.style.display = 'block';
         break;
         case 11:
+            question10.style.display = 'none';
             divQuestoes.style.display = 'none';
             divQuizFinalizado.style.display = "block";
-            divQuizFinalizado.innerHTML = `
-            <p>Sua pontuação: ${score}</p>
-            <br>
-            <button onclick="resetAndGoToMainMenu()" class="optionButton questionButton">Menu Principal</button>
+            divQuizFinalizado.innerHTML = 
             `
-            ;
+                <p>Sua pontuação: ${score}</p>
+                <br>
+                <button onclick="reloadPage()" class="optionButton questionButton">Menu Principal</button>
+            `
         break;
     }
     console.log(`question: ${question}`);
@@ -216,7 +116,15 @@ function renderQuestion(){
 function renderInstructions(){
     menuPrincipal.style.display = 'none';
     divQuestoes.style.display = 'none';
+    divCreditos.style.display = 'none';
     divInstrucoes.style.display = 'block';
+}
+
+function renderCredits(){
+    menuPrincipal.style.display = 'none';
+    divQuestoes.style.display = 'none';
+    divInstrucoes.style.display = 'none';
+    divCreditos.style.display = 'block';
 }
 
 function increaseMainBox(fun){
@@ -224,9 +132,10 @@ function increaseMainBox(fun){
     // Com isso dá pra atribuir um valor nele q vai ser uma string, q nem aqui embaixo =)
     menuPrincipal.style.display = 'none';
     
-
     startButton.style.display = 'none';
     helpButton.style.display = 'none';
+    creditsButton.style.display = 'none';
+
     let id = null;
     let h = mainBox.style.minHeight;
     let w = mainBox.style.minWidth;
@@ -262,10 +171,74 @@ function audioPause(){
     pacManPlay.style.display = 'block';
 }
 
-function questionAnswered(correct){
+function questionAnswered(correct){  //SFJUOHSDOFUHDSFOIUPHSDFOIUHDSFIUOHDSFOISUDHFDSOIUHFSDIUHFSIUHFISDUHFSDIUFHDSIUFHSDIUHFDSOIUFHDSIUFHDSIUFHDSOIUFHSDOIUHF
+    switch (question){
+        case 1:
+            question1Options[0].classList.add('optionButtonWrong');
+            question1Options[1].classList.add('optionButtonWrong');
+            question1Options[2].classList.add('optionButtonCorrect');
+            question1Options[3].classList.add('optionButtonWrong');
+        break;
+        case 2:
+            question2Options[0].classList.add('optionButtonWrong');
+            question2Options[1].classList.add('optionButtonWrong');
+            question2Options[2].classList.add('optionButtonWrong');
+            question2Options[3].classList.add('optionButtonCorrect');
+        break;
+        case 3:
+            question3Options[0].classList.add('optionButtonWrong');
+            question3Options[1].classList.add('optionButtonCorrect');
+            question3Options[2].classList.add('optionButtonWrong');
+            question3Options[3].classList.add('optionButtonWrong');
+        break;
+        case 4:
+            question4Options[0].classList.add('optionButtonWrong');
+            question4Options[1].classList.add('optionButtonWrong');
+            question4Options[2].classList.add('optionButtonCorrect');
+            question4Options[3].classList.add('optionButtonWrong');
+        break;
+        case 5:
+            question5Options[0].classList.add('optionButtonWrong');
+            question5Options[1].classList.add('optionButtonWrong');
+            question5Options[2].classList.add('optionButtonWrong');
+            question5Options[3].classList.add('optionButtonCorrect');
+        break;
+        case 6:
+            question6Options[0].classList.add('optionButtonCorrect');
+            question6Options[1].classList.add('optionButtonWrong');
+            question6Options[2].classList.add('optionButtonWrong');
+            question6Options[3].classList.add('optionButtonWrong');
+        break;
+        case 7:
+            question7Options[0].classList.add('optionButtonWrong');
+            question7Options[1].classList.add('optionButtonWrong');
+            question7Options[2].classList.add('optionButtonCorrect');
+            question7Options[3].classList.add('optionButtonWrong');
+        break;
+        case 8:
+            question8Options[0].classList.add('optionButtonWrong');
+            question8Options[1].classList.add('optionButtonWrong');
+            question8Options[2].classList.add('optionButtonWrong');
+            question8Options[3].classList.add('optionButtonCorrect');
+        break;
+        case 9:
+            question9Options[0].classList.add('optionButtonWrong');
+            question9Options[1].classList.add('optionButtonWrong');
+            question9Options[2].classList.add('optionButtonCorrect');
+            question9Options[3].classList.add('optionButtonWrong');
+        break;
+        case 10:
+            question10Options[0].classList.add('optionButtonWrong');
+            question10Options[1].classList.add('optionButtonWrong');
+            question10Options[2].classList.add('optionButtonWrong');
+            question10Options[3].classList.add('optionButtonCorrect');
+        break;
+    }
+    
     question++;
+
     if(correct){
-        score ++;
+        score++;
     }
     setTimeout(renderQuestion, 2.0*1000);
 }
@@ -280,11 +253,17 @@ function resetAndGoToMainMenu(){
     divQuestoes.style.display = 'none';
     divQuizFinalizado.style.display = 'none';
     divInstrucoes.style.display = 'none';
+    divCreditos.style.display = 'none'
 
     startButton.style.display = 'block';
     helpButton.style.display = 'block';
-    menuPrincipal.style.display = 'block'
+    menuPrincipal.style.display = 'block';
+    creditsButton.style.display = 'block';
 
     console.log(`question: ${question}`);
     console.log(`score: ${score}`);
+}
+
+function reloadPage(){
+    document.location.reload();
 }
