@@ -251,3 +251,12 @@ li {
     margin-bottom: 25px;
     font-size: 14pt;
 }
+
+ul{
+    text-align: center;
+    list-style-type: none;
+}
+
+a {
+    color: white;
+}
