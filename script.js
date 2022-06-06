@@ -178,6 +178,12 @@ function questionAnswered(correct){
     const toastyMk = new Audio('./public/audio/toastySound.mp3');
     toastyMk.volume = 0.2;
 
+    const correctfx = new Audio('./public/audio/correctfx.mp4');
+    correctfx.volume = 0.2;
+
+    const wrongfx = new Audio('./public/audio/wrongfx.mp4');
+    wrongfx.volume = 0.2;
+    
     switch (question){
         case 1:
 
@@ -292,6 +298,9 @@ function questionAnswered(correct){
 
     if(correct){
         score++;
+        correctfx.play();
+    }else{
+        wrongfx.play()
     }
     setTimeout(renderQuestion, 1.75*1000);
 }
